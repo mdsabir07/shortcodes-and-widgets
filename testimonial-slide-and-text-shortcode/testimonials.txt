@@ -1,0 +1,190 @@
+	/*====== Start testimonials addon ======*/
+	vc_map(
+		array(
+			"name"		=> esc_html__( "Brightnight testimonials", "bright-night" ),
+			"base"		=> "testimonial_slides",
+			"category"	=> esc_html__( "Brightnight", "bright-night" ),
+			"params"	=> array(
+		        array(
+		            "type"		 => "textfield",
+		            "heading"	 => esc_html__( "Link url", "bright-night" ),
+		            "param_name" => "link_url",
+		            "description"=> esc_html__( "Type link url.", "bright-night" ),
+		        ),
+			)
+		)
+	);
+	// End popup video addon
+
+
+
+/*===== Start Magnific popup shortcode =====*/ 
+function new_testimonial_shortcode( $atts ) {
+	extract( shortcode_atts( 
+		array(
+			'link_url'		=> '',
+			'count'			=> '5',
+	), $atts ));
+
+	$q = new WP_Query(array('posts_per_page' => $count, 'post_type' => 'testimonial'));
+
+	$testi_id = rand(980632984, 738452708);
+
+	$popup_video_markup = '
+	<script>
+	jQuery(document).ready(function($){
+		$(".testimonial-slides-'.$testi_id.'").owlCarousel({
+			items: 1,
+			loop: true,
+			dots: true,
+			nav: true,
+			navText: ["<i class=\'fa fa-angle-left\'></i>", "<i class=\'fa fa-angle-right\'></i>"],
+			autoplay: false
+		});
+	});
+
+	jQuery(window).load(function(){
+	    jQuery(\'a[href*="youtube.com/watch"]\').magnificPopup({
+	       type: \'iframe\',
+           iframe: {
+               patterns: {
+                   youtube: {
+                       index: \'youtube.com\', 
+                       id: \'v=\', 
+                       src: \'//www.youtube.com/embed/%id%?rel=0&autoplay=1\'
+                    }
+               }
+           }   
+	    });      
+	});
+	</script>
+
+	<div class="owl-carousel testimonial-slides-'.$testi_id.' testimonial-carousel">';
+
+	while ($q->have_posts()) : $q->the_post();
+		$post_id = get_the_ID();
+		$content = get_the_content();
+
+
+		$popup_video_markup .= '
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="carousel-content">
+						<h2>'.get_the_title($post_id).'</h2>
+						'.wpautop(do_shortcode( $content )).'
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="brightnight-testi-video">
+						<a class="brightnight-testi-popup-video" href="'.esc_url( $link_url ).'"><span><i class="fa fa-play"></i></span></a>
+					</div>
+				</div>
+			</div>
+		</div>';
+	endwhile;
+		$popup_video_markup .= '</div>';
+	wp_reset_query();
+	return $popup_video_markup;
+}
+add_shortcode( 'testimonial_slides', 'new_testimonial_shortcode' );
+// End magnific popup shortcode
+
+    register_post_type( 'testimonial', 
+        array(
+            'labels' => array(
+                'name'          => __('Testimonials'),
+                'singular_name' => __('Testimonial'),
+                'add_new'       => __('Add New Testimonial'),
+                'add_new_item'  => __('Add New Testimonial Item')
+            ),
+            'supports'  => array('title', 'editor', 'thumbnail', 'page-attributes'),
+            'public'    => false,
+            'show_ui'   => true
+        )
+    );
+
+
+/*Testimonials css*/
+.carousel-content h2 {
+    font-size:  30px;
+    color:  #363636;
+    font-weight: 600;
+    position:  relative;
+    margin-bottom: 30px;
+}
+
+.carousel-content {
+    text-align:  center;
+    background:  #ddd;
+    height: 370px;
+    display:  flex;
+    justify-content:  center;
+    align-items:  center;
+    flex-direction:  column;
+}
+
+.carousel-content h2:after {
+    background:  #ccc;
+    height:  2px;
+    width:  50px;
+    position:  absolute;
+    left:  0;
+    bottom:  0;
+}
+
+.carousel-content h2:after {
+    position:  absolute;
+    bottom: -15px;
+    width: 220px;
+    height:  2px;
+    background: #ccc;
+    content: "";
+    left: -65px;
+}
+
+.brightnight-testi-video {
+    background:  #ddd;
+    height: 370px;
+    text-align:  center;
+    justify-content:  center;
+    align-items:  center;
+    display: flex;
+}
+
+.brightnight-testi-popup-video i.fa {
+    font-size:  25px;
+    color:  #fff;
+    background:  #007BFF;
+    height:  60px;
+    width:  90px;
+    line-height:  60px;
+    text-align:  center;
+    transition:  .3s;
+}
+
+.testimonial-carousel .owl-nav div {
+    position:  absolute;
+    left: -20px;
+    top:  50%;
+    margin-top:  -25px;
+    font-size:  30px;
+    color: #58595B;
+}
+
+.testimonial-carousel .owl-nav div.owl-next {
+    left:  auto;
+    right: -20px;
+}
+
+
+/*responsive css*/
+.carousel-content {
+    max-height:  190px;
+    margin-bottom:  30px;
+}
+
+.brightnight-testi-video {
+    max-height:  190px;
+}
+

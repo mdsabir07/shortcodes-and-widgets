@@ -1,0 +1,25 @@
+.single-tag-box a {
+    color: #6C006C;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.single-tag-box {
+	border: 1px solid #6C006C;
+	padding: 15px;
+	border-radius: 4px;
+	margin-bottom: 30px !important;
+}
+.single-tag-box2 a {
+    color: #F92447;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.single-tag-box2 {
+	border: 1px solid #F92447;
+	padding: 15px;
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+

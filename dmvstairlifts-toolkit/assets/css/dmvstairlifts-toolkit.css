@@ -1,0 +1,479 @@
+/*Banner CSS*/
+.banner-area {
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.banner-area:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  content: "";
+  z-index: -1;
+  opacity: .5;
+}
+
+.banner-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.boxed-btn {
+  display: inline-block;
+  background: #FF5800;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 40px;
+  transition: .3s;
+}
+
+.boxed-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.banner-btn.boxed-btn {
+  margin-top: 15px;
+}
+
+
+/*Colored CSS*/
+.colored-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+}
+/*.colored-area:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  content: "";
+  z-index: -1;
+  opacity: .8;
+}*/
+.colored-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.intrunk-colored-buttons {
+  margin-top: 30px;
+}
+.colored-content {
+  padding: 0 228px 0 0;
+}
+.colored-imgs {
+  position: relative;
+}
+.colored-imgs::after {
+	position: absolute;
+	left: 0;
+	bottom: -404px;
+	width: 440px;
+	height: 1px;
+	content: "";
+	background: #fff;
+}
+.grey .colored-imgs::after {
+	display: none;
+}
+.img-left img {
+	position: absolute;
+	left: 0;
+	bottom: -230px;
+	width: 300px;
+	z-index: 2;
+	height: 400px;
+	object-fit: cover;
+}
+
+.img-right img {
+	position: absolute;
+	right: 100px;
+	top: 0;
+	width: 275px;
+	z-index: 3;
+	height: 400px;
+	object-fit: cover;
+}
+
+.blue .img-left img {
+	width: 420px;
+	height: 330px;
+	opacity: .8;
+}
+
+.blue .img-right img {
+	right: 40px;
+	top: 115px;
+	width: 400px;	
+	height: 285px;
+}
+
+.colored-section.grey {
+  color: #000;
+}
+
+.colored-section.grey .colored-content {
+  padding: 0 0 0 228px;
+}
+
+.colored-section.grey {
+  color: #000;
+}
+
+.colored-section.grey .colored-content {
+  padding: 0 0 0 228px;
+}
+
+.colored-section.grey .img-left img {
+  width: 410px;
+  height: 300px;
+  border: 1px solid #eee;
+}
+
+.colored-section.grey .img-right img {
+  width: 450px;
+  height: 270px;
+  left: 90px;
+  top: 50px;
+  border: 1px solid #eee;
+}
+
+.grey.single-image .img-right {
+  display: none;
+}
+
+.grey.single-image .img-left img {
+  position: inherit;
+  width: 100%;
+  height: auto;
+}
+
+.grey.single-image .colored-content {
+  padding: 114px;
+}
+
+/*====== Section title CSS ========*/
+.intrunk-section-title.theme-1 h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.intrunk-section-title.theme-2 h2 {
+  font-size: 35px;
+  font-weight: 700;
+}
+.intrunk-section-title.theme-3 h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.intrunk-section-title.theme-4 h2 {
+  font-size: 27px;
+  font-weight: 600;
+}
+.intrunk-section-title.theme-5 h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/*Project CSS*/
+.project-box-bg {
+  height: 200px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+ul.project-shortlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+ul.project-shortlist li {
+  display: inline-block;
+  margin: 0 20px;
+  font-weight: 700;
+  opacity: .4;
+  cursor: pointer;
+}
+
+ul.project-shortlist li.active {
+  opacity: 1;
+}
+
+.single-project-box {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.single-project-box h4 a {
+  color: #000;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.single-project-box h4 {
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.single-project-box h4 a:hover {
+  color: #FF0000;
+}
+
+/*Brand cat page CSS*/
+.brand-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: #ddd;
+  z-index: 1;
+  font-weight: 600;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  font-size: 12px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-bg:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  content: "";
+  z-index: -1;
+  opacity: .1;
+}
+
+p.bookmark {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+p.bookmark i.fa {
+  padding-right: 40px;
+  font-size: 20px;
+  transform: translateY(2px);
+  font-weight: 600;
+}
+
+.brand-bg-content img {
+  width: 80px;
+  margin-bottom: 25px;
+}
+
+.brand-bg-content h2 {
+    font-weight: 700;
+    text-transform: lowercase;
+    letter-spacing: 5px;
+}
+
+span.cat-title {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.wsale-wrap h2 {
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.wsale-wrap .table td, .wsale-wrap .table th {
+    border-top: 1px solid #000;
+}
+
+.wsale-wrap .table td {
+    border-left: 1px solid #000;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.wsale-wrap .table tr {
+    border-right: 1px solid #000;
+}
+
+.wsale-wrap .table tr.black-bg td {
+    background-color: #000;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.wsale-wrap {
+    margin-bottom: 90px;
+}
+
+/*.brand-image-gallery.gallery-image-2 {
+    position: relative;
+    top: 50px;
+    margin-bottom: 450px;
+}
+
+.brand-image-gallery.gallery-image-2.left .image-gallery-block.gallery-block-1 {
+    position: absolute;
+    right: 50px;
+    top: -50px;
+    height: 650px !important;
+    width: 60%;
+}*/
+
+.image-gallery-block{
+	  background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    height: 375px;
+}
+
+/*.brand-image-gallery.gallery-image-2 .image-gallery-block {
+    width: 50%;
+    height: 375px;
+}
+
+.brand-image-gallery.gallery-image-2.right .image-gallery-block {
+	width: 60%;
+}
+
+.brand-image-gallery.gallery-image-2.right .image-gallery-block.gallery-block-1 {
+    margin-left: 50px;
+    height: 400px;
+}
+
+.brand-image-gallery.gallery-image-2.right .image-gallery-block.gallery-block-2 {
+    position: absolute;
+    right: 0;
+    margin-top: -25px;
+}
+*/
+/*.brand-image-gallery.gallery-image-3.left .image-gallery-block.gallery-block-1 {
+    width: 93%;
+    margin-left: 30px;
+}
+
+.brand-image-gallery.gallery-image-3.left .image-gallery-block.gallery-block-2, .brand-image-gallery.gallery-image-3.left .image-gallery-block.gallery-block-3, .brand-image-gallery.gallery-image-3.right .image-gallery-block.gallery-block-1, .brand-image-gallery.gallery-image-3.right .image-gallery-block.gallery-block-2 {
+    width: 45.6%;
+    display: inline-block;
+    margin: 12px 5px 0;
+}*/
+
+/*.brand-image-gallery.gallery-image-3.left .image-gallery-block.gallery-block-2 {
+    margin-left: 30px;
+}
+
+.brand-image-gallery.gallery-image-3.right .image-gallery-block.gallery-block-3 {
+    width: 93%;
+    margin-left: 21px;
+}
+
+.brand-image-gallery.gallery-image-3.right .image-gallery-block.gallery-block-1, .brand-image-gallery.gallery-image-3.right .image-gallery-block.gallery-block-2 {
+    margin: 0 0 8px 10px;
+}
+
+.brand-image-gallery.gallery-image-3.right .image-gallery-block.gallery-block-1 {
+    margin-left: 21px;
+}
+*/
+/*.brand-image-gallery.gallery-image-4 .image-gallery-block {
+    width: 49.86%;
+    display: inline-block;
+    height: 350px !important;
+}
+
+.brand-image-gallery.gallery-image-4.right {
+    margin-right: -45px;
+}
+
+.brand-image-gallery.gallery-image-5 .image-gallery-block {
+    width: 33%;
+    display: inline-block;
+}
+
+.brand-image-gallery.gallery-image-5 .image-gallery-block.gallery-block-1 {
+    margin-left: 4px;
+}
+
+.brand-image-gallery.gallery-image-5 .image-gallery-block.gallery-block-4, .brand-image-gallery.gallery-image-5 .image-gallery-block.gallery-block-5 {
+    width: 49.6%;
+}
+
+.brand-image-gallery.gallery-image-5 .image-gallery-block.gallery-block-4 {
+    margin-left: 5px;
+}
+
+.brand-image-gallery.gallery-image-6 .image-gallery-block {
+    width: 49.7%;
+    display: inline-block;
+}
+
+.brand-image-gallery.gallery-image-6 {
+    margin-left: 8px;
+}
+
+.brand-image-gallery.gallery-image-6 .image-gallery-block.gallery-block-3, .brand-image-gallery.gallery-image-6 .image-gallery-block.gallery-block-4, .brand-image-gallery.gallery-image-6 .image-gallery-block.gallery-block-5, .brand-image-gallery.gallery-image-6 .image-gallery-block.gallery-block-6 {
+    width: 24.7%;
+}
+
+.brand-image-gallery.gallery-image-7 .image-gallery-block {
+    width: 24.78%;
+    display: inline-block;
+}*/
+
+/*.brand-image-gallery.gallery-image-7 .image-gallery-block.gallery-block-5, .brand-image-gallery.gallery-image-7 .image-gallery-block.gallery-block-6, .brand-image-gallery.gallery-image-7 .image-gallery-block.gallery-block-7 {
+    width: 33.15%;
+}*/
+
+/*.brand-image-gallery.gallery-image-8 .image-gallery-block, .brand-image-gallery.gallery-image-10 .image-gallery-block, .brand-image-gallery.gallery-image-12 .image-gallery-block {
+    display: inline-block;
+    width: 24.79%;
+}
+*/
+.image-gallery-block {
+	display: inline-block;
+    width: 24.78%;
+    height: 350px;
+}
+

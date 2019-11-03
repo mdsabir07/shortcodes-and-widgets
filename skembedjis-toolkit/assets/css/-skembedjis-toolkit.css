@@ -1,0 +1,492 @@
+img {
+    min-width: 100%;
+    height: auto;
+}
+
+.vc_row.wpb_row.vc_row-fluid .wpb_column.vc_column_container.vc_col-sm-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/*Product cat list css*/
+.product-cat-list-wrap {
+    position: relative;
+    float: right;
+    margin-right: 30px;
+}
+
+a.btn.btn-inline {
+    border: 2px solid #CACACA;
+    color: #222;
+}
+
+ul#collapseCatlist {
+    position: absolute;
+    margin: 0;
+    list-style: none;
+    right: -5px;
+    z-index: 1000000000000000999;
+    background: rgba(255,255,255,.8);
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #eee;
+    height: 350px;
+    overflow: scroll;
+    width: 200px;
+}
+ul#collapseCatlist li a {
+    color: #222;
+}
+
+/*Slider CSS*/
+.slider-bg {
+    background-size: cover;
+    background-position: 0 0px;
+    height: 450px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: #fff;
+    background-color: #ddd;
+}
+
+.single-slide-item img {
+    /*height: 500px;*/
+    width: 100%;
+    object-fit: contain;
+}
+
+.slider-bg:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    content: "";
+    opacity: .3;
+    z-index: -1;
+}
+
+.slider-content h5 {
+    color: #FCC61D;
+    text-transform: uppercase;
+}
+
+.slider-buttons a.boxed-btn.btn-1 {
+    margin-right: 10px;
+    border-color: #B28F20;
+}
+
+.slider-buttons .boxed-btn {
+    margin-top: 30px;
+}
+
+.slider-buttons a.boxed-btn:hover {
+    background: #fff;
+    color: #333;
+}
+/*.skembedjis-slides.slick-slider.slick-dotted {
+    margin-bottom: 135px;
+}*/
+
+.slider-bg .row .absolute-position {
+    position: absolute;
+    right: 104px;
+    bottom: -112px;
+    display: block;
+}
+
+.slider-bg {
+    margin-bottom: 100px;
+}
+
+
+/*====== Blog post CSS ========*/
+.skembedjis-single-post-block {
+    margin-bottom: 40px;
+}
+.sin-post-link {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.post-block-content {
+    padding: 0 15px 15px;
+}
+a.post-btn.filled-btn {
+    margin-left: 0;
+    padding: 8px 20px 0 0;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    color: #00A4DD;
+    transition: .3s;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+a.post-btn.filled-btn:hover {
+    color: #222;
+}
+
+.post-block-content h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.post-block-content h2 a {
+    color: #222;
+    transition: .3s;
+}
+
+.post-block-content h2 a:hover {
+    color: #00A4DD;
+}
+
+.post-date {
+    font-size: 12px;
+}
+
+.skembedjis-single-post-block {
+    background: #f6f6f6;
+    border: 1px solid #F2F2F2;
+}
+
+/*Follow us CSS*/
+.skembedjis-follow-us {
+    margin-left: -15px;
+    position: relative;
+}
+
+.follow-us-img {
+    height: 160px;
+    width: 160px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ddd;
+    background-position: center;
+    position: relative;
+}
+
+a.follow-us-icon {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    font-size: 25px;
+    color: #fff;
+    transition: .3s;
+}
+a.follow-us-icon:hover {
+    color: #00A4DD;
+}
+
+/*Porduct slider css*/
+.product-slide-bg {
+    background-repeat: no-repeat;
+    background-color: #ddd;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 1;
+    height: 500px;
+    width: 100%;
+}
+
+.product-slide-bg:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    content: "";
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,255,255,1));
+    z-index: -1;
+}
+
+.single-product-slide {
+    background: #fff;
+    height: 290px;
+    border: 1px solid #eee;
+}
+
+.product-img {
+    background-size: cover;
+    background-position: center;
+    background-color: #FCAF17;
+    background-repeat: no-repeat;
+    height: 185px;
+	margin-bottom: 15px;
+}
+
+.product-slide-title h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.product-slide-title h3 a {
+    color: #222;
+}
+
+
+
+
+/* Start: Recommended Isotope styles */
+ 
+/**** Isotope Filtering ****/
+ 
+.isotope-item {
+  z-index: 2;
+}
+ 
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+ 
+/**** Isotope CSS3 transitions ****/
+ 
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+ 
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+ 
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+ 
+/**** disabling Isotope CSS3 transitions ****/
+ 
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+ 
+/* End: Recommended Isotope styles */
+
+
+/*Product Carousel CSS*/
+.single-product-item {
+	padding: 15px;
+}
+.product-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #FCAF17;
+    width: 100%;
+    max-width: 100%;
+    height: 150px !important;
+    margin-bottom: 20px;
+	-moz-box-shadow: inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;
+}
+
+.single-product-item-inner {
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+.product-detail h4 {
+    font-size: 18px;
+}
+
+.product-detail h4 a {
+    color: #000;
+    transition: .3s;
+}
+
+.product-detail a.readmore-btn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.single-product-item-inner:hover .product-detail a.readmore-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.vc_row.box-shadow-down {
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px #E1E1E1;
+	z-index: 9;
+}
+
+.vc_row.box-shadow-down .wpb_column.vc_column_container.vc_col-sm-8 {
+    position: relative;
+}
+
+.vc_row.box-shadow-down .wpb_column.vc_column_container.vc_col-sm-8:after {
+    position: absolute;
+    right: 8px;
+    top: 35px;
+    width: 2px;
+    height: 420px;
+    background: #fafafa;
+    content: "";
+    box-shadow: 2px 0 2px #E2E0E0;
+}
+
+
+/*Slick slider css*/
+.skembedjis-pruduct-carousel.slick-slider i.slick-arrow, .product-slide-carousel.slick-slider i.slick-arrow {
+    position: absolute !important;
+    left: 0;
+    top: 50%;
+    margin-top: -20px;
+    font-size: 20px;
+    background: #2B2B2B;
+    color: #FCAF17;
+    width: 22px;
+    text-align: center;
+    z-index: 99;
+    cursor: pointer;
+    transition: .3s;
+    transform: scale(1);
+}
+
+.skembedjis-pruduct-carousel.slick-slider i.slick-arrow:hover, .product-slide-carousel.slick-slider i.slick-arrow:hover {
+	transform: scale(1.1);
+	opacity: .7;
+}
+
+.skembedjis-pruduct-carousel.slick-slider i.fa.fa-angle-right, .product-slide-carousel i.fa.fa-angle-right {
+    left: auto;
+    right: 0;
+}
+
+.product-slide-carousel.slick-slider i.slick-arrow {
+    top: 50%;
+    left: -40px;
+    background: none;
+    font-size: 50px;
+}
+
+.product-slide-carousel i.fa.fa-angle-right {
+    left: auto;
+    right: -40px;
+}
+
+
+
+/*====== Section title CSS ========*/
+.skembedjis-section-title.theme-1 h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+.skembedjis-section-title.theme-2 h2 {
+    font-size: 35px;
+    font-weight: 700;
+}
+.skembedjis-section-title.theme-3 h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.skembedjis-section-title.theme-4 h2 {
+    font-size: 27px;
+    font-weight: 700;
+}
+.skembedjis-section-title.theme-5 h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/*====== Iconnic button CSS ========*/
+
+a.skembedjis-iconic-btn {
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+}
+.boxed-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    position: relative;
+    transition: .3s;
+    border: 4px solid #313131;
+}
+.skembedjis-iconic-btn.boxed-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    position: relative;
+    transition: .3s;
+    border: 4px solid #A5A5A5;
+}
+.inline-btn {
+    display: inline-block;
+    background-color: none;
+    transition: .3s;
+}
+
+.boxed-btn:after {
+    position: absolute;
+    right: 18px;
+    top: 11px;
+    content: "\f0da";
+    font-family: fontawesome;
+}
+
+/*product category css*/
+
+.row.no-gutters {
+    padding: 80px 0;
+}
+
+a.single-wns-cat-item {
+    height: 183px;
+    background-size: cover;
+    background-color: #ddd;
+    background-position: center;
+    display: block;
+}
+
+.row.no-gutters .col, .row.no-gutters .col-sm-6 {
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.cat-title-wrapper h6 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cat-title-wrapper h6 a {
+    color: #222;
+}
+
+
+

@@ -1,0 +1,1212 @@
+
+
+/*Contact details css*/
+
+.contact-details-box h1 {
+
+    width:  50%;
+
+    margin-bottom: 155px;
+
+    color: #fff;
+
+}
+
+.contact-details-info .info-text {
+
+    width:  33.3333%;
+
+    font-size:  16px;
+
+    line-height:  2;
+
+    float: left;
+
+}
+
+
+
+.contact-details-info .info-text h3 {
+
+    font-size: 20px;
+
+    margin-bottom:  15px;
+
+    color: #fff;
+
+}
+
+
+
+.contact-details-info .info-text p:last-child {
+
+    margin: 0;
+
+}
+
+
+
+/*Contact page contact details*/
+
+.contact-details-info.contact-page2 .info-text {
+
+    float:  none;
+
+    width:  100%;
+
+    padding: 15px 28px;
+
+}
+
+
+
+.contact-details-info.contact-page2 .info-text h3 {
+
+    color: #272D2F;
+
+}
+
+
+
+.contact-details-box.contact-page2 h2 {
+
+    font-size:  30px;
+
+    margin-bottom: 80px;
+
+    padding-left: 28px;
+
+}
+
+.contact-details-info.contact-page2 .info-text:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.contact-details-info.contact-page2 .info-text:hover {
+
+    box-shadow: 1px 3px 8px #F4F4F4;
+
+}
+
+.contact-details-info.contact-page2 .info-text:first-child {
+
+    margin-top: -20px;
+
+}
+
+
+
+
+
+/*====== Like comment CSS =========*/
+
+.brightnight_like_comment span {
+
+    padding: 0 35px;
+
+}
+
+
+
+.brightnight_like_comment span i.fa {
+
+    padding-right: 13px;
+
+}
+
+
+
+/*====== Section title CSS =========*/
+
+.optimistic-section-title {
+
+    text-align:  center;
+
+    font-size: 19px;
+
+}
+
+
+
+.optimistic-section-title h1 {
+
+    color:  #272D2F;
+
+    margin-bottom:  40px;
+
+}
+
+
+
+/*======== Home2 CSS ==========*/
+
+/*slider css*/
+
+.home2-single-slide-item:after {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    content: "";
+
+    box-shadow: 0 5px 20px #E2E2E2;
+
+    border: 10px solid #fff;
+
+    box-sizing: border-box;
+
+}
+
+
+
+.home2-single-slide-item {
+
+    background-size: cover;
+
+    background-color: #ddd;
+
+    background-position: center;
+
+    width: 100%;
+
+    height: 548px;
+
+    border: 10px solid #fff;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 1;
+
+    padding: 20px;
+
+}
+
+
+
+.home2-slide-content {background:  #fff;padding: 35px;border-radius: 10px;line-height:  1.8;}
+
+
+
+.home2-slide-content h1 {
+
+    font-size:  55px;
+
+    margin-bottom:  35px;
+
+}
+
+
+
+.brightnight-btn .filled-btn, .brightnight-btn .bordered-btn {
+
+    color:  #272D2F;
+
+    font-size:  16px;
+
+    text-transform:  uppercase;
+
+    margin: 0 10px;
+
+    margin-top: 20px;
+
+    display:  inline-block;
+
+    margin-bottom: 25px;
+
+    transition:  .3s;
+
+}
+
+
+
+.brightnight-btn .filled-btn {
+
+    background:  #FDCF1E;
+
+    padding:  10px 30px;
+
+    border-radius: 30px;
+
+}
+
+
+
+.brightnight-btn .filled-btn:hover {
+
+    background:  #000;
+
+    color:  #fff;
+
+}
+
+/*owl carousel css*/
+
+.brightnight-home2-slides .owl-dots div {
+
+    display: block;
+
+    background: #D9D9D9;
+
+    height:  10px;
+
+    width:  10px;
+
+    margin: 10px 0;
+
+    border-radius: 50%;
+
+}
+
+
+
+.brightnight-home2-slides .owl-dots div.active {
+
+    background:  #272D2F;
+
+}
+
+
+
+.brightnight-home2-slides .owl-dots {
+
+    position:  absolute;
+
+    top: 40%;
+
+    left: -30px;
+
+    margin-top:  7px;
+
+}
+
+
+
+.brightnight-home2-slides .owl-nav div {
+
+    position:  absolute;
+
+    left: -30px;
+
+    top:  50%;
+
+    margin-top: -25px;
+
+    font-size:  30px;
+
+    line-height:  30px;
+
+    color:  #D9D9D9;
+
+    transition:  .3s;
+
+}
+
+
+
+.brightnight-home2-slides .owl-nav div.owl-next {
+
+    left:  auto;
+
+    right:  -30px;
+
+}
+
+
+
+.brightnight-home2-slides .owl-nav div:hover {
+
+    color:  #272D2F;
+
+}
+
+
+
+/*home 4 post css*/
+
+.home4-single-post-box img {
+
+    float:  left;
+
+    width:  585px;
+
+    height:  665px;
+
+    object-fit:  cover;
+
+}
+
+.home4-post-content {
+
+    padding-left: 640px;
+
+    display:  block;
+
+    padding-top: 90px;
+
+    font-size:  16px;
+
+    line-height:  1.8;
+
+}
+
+
+
+.home4-post-content h1 {
+
+    font-size:  50px;
+
+    line-height:  1.4;
+
+    position:  relative;
+
+}
+
+
+
+.home4-post-content h1:before {
+
+    position:  absolute;
+
+    left:  0;
+
+    top: -28px;
+
+    width: 120px;
+
+    height: 2px;
+
+    background: #FDCF1E;
+
+    content:  "";
+
+}
+
+
+
+.home4-post-content p span {
+
+    color:  #C1C1C1;
+
+    font-size:  20px;
+
+    display: inline-block;
+
+    margin: 12px 0;
+
+}
+
+.float-right .home4-single-post-box img {
+
+    float: right;
+
+}
+
+
+
+.float-right .home4-post-content {
+
+    padding-left: 0;
+
+    padding-right: 620px;
+
+}
+
+
+
+/*Home 5 CSS*/
+
+.home5-post .home4-post-content h1 {
+
+    color: #fff;
+
+}
+
+.home5-post .home4-single-post-box img {
+
+    height: 540px;
+
+}
+
+.home5-post .home4-post-content {
+
+    padding-top: 55px;
+
+}
+
+
+
+/*Tile gallery CSS*/
+
+.brightnight-tile-gallery {
+
+    margin-left:  -1%;
+
+}
+
+
+
+.tile-gallery-block {
+
+    margin-left:  .69%;
+
+    float:  left;
+
+    background-size:  cover;
+
+    background-position:  center;
+
+    width:  24.31%;
+
+    background-color:  #333;
+
+    margin-bottom: .69%;
+
+}
+
+
+
+.brightnight-tile-gallery-image-7 .tile-gallery-block.tile-gallery-block-5, .brightnight-tile-gallery-image-7 .tile-gallery-block.tile-gallery-block-6, .brightnight-tile-gallery-image-7 .tile-gallery-block.tile-gallery-block-7 {
+
+    width: 32.64%;
+
+}
+
+ 
+
+
+
+.full-width-section {
+
+    position: relative;
+
+    z-index: 1;
+
+    height: 500px;
+
+}
+
+
+
+.full-width-bg {
+
+    position:  absolute;
+
+    width: 55%;
+
+    height:  100%;
+
+    left:  0;
+
+    top:  0;
+
+    background-size:  cover;
+
+    background-position:  center;
+
+    background-color:  #333;
+
+}
+
+.full-width-section h1 {
+
+    font-size:  32px;
+
+    color:  #fff;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.fullwidth-section-content {
+
+	margin-top: 70px;
+
+}
+
+
+
+.fullwidth-section-content p a {
+
+    display:  block;
+
+    color: #FDCF1E;
+
+    margin-top: 10px;
+
+    transition: .3s;
+
+}
+
+
+
+.fullwidth-section-content p a i {
+
+    padding-left:  10px;
+
+}
+
+
+
+.fullwidth-section-content p a:hover {
+
+    color:  #DBDFE2;
+
+}
+
+
+
+/*hero area*/
+
+.hero-area .full-width-section {
+
+    height: 680px;
+
+    position:  relative;
+
+    z-index:  1;
+
+}
+
+
+
+.full-width-section h4 {
+
+    color: #C3C1C1;
+
+    font-size:  18px;
+
+    transform:  rotateZ(270deg);
+
+    position:  absolute;
+
+    right: -130px;
+
+    top: 570px;
+
+}
+
+
+
+.hero-area .full-width-bg.hero-area {
+
+    width: 86%;
+
+}
+
+.home6-hero h1 {
+
+    color:  #fff;
+
+}
+
+
+
+/*Service area css*/
+
+.service-icom i.fa {
+
+    font-size: 50px;
+
+    color:  #ACACAC;
+
+    margin-bottom:  20px;
+
+}
+
+
+
+.service-img img {
+
+    max-width: 55px;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+.info-text h3 {
+
+    font-size:  20px;
+
+    color:  #fff;
+
+    font-weight:  700;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.info-text a {color:  #FDCF1E;transition:  .3s;opacity:  0;visibility:  hidden;}
+
+
+
+.info-text a:hover {
+
+    color: #fff;
+
+}
+
+.info-text a i.fa {
+
+    padding-left:  10px;
+
+    transition: .3s;
+
+}
+
+
+
+.single-service-box:hover {
+
+    box-sizing:  border-box;
+
+    box-shadow: 0 7px 20px #343434;
+
+}
+
+
+
+.single-service-box {
+
+    padding: 30px 0 40px 20px;
+
+    transition:  .3s;
+
+    margin-bottom:  50px;
+
+}
+
+
+
+.single-service-box:hover .info-text a {
+
+    opacity:  1;
+
+    visibility:  visible;
+
+}
+
+
+
+.show-more-post.service-area {
+
+    position:  absolute;
+
+    right: 28%;
+
+    bottom: 0;
+
+}
+
+
+
+.home6 h1 {
+
+    font-size:  35px;
+
+    color:  #fff;
+
+    position:  relative;
+
+    font-weight:  700;
+
+}
+
+
+
+.home6 h1:after {
+
+    position:  absolute;
+
+    right: 28%;
+
+    bottom: -30px;
+
+    width: 95px;
+
+    height:  1px;
+
+    background: #535353;
+
+    content: "";
+
+}
+
+.home6.text-left h1:after {
+
+    right: auto;
+
+    left: 0;
+
+}
+
+
+
+.home6-work-process h3 {
+
+    font-size:  20px;
+
+    color:  #fff;
+
+    height: 45px;
+
+    width: 45px;
+
+    text-align:  center;
+
+    line-height: 40px;
+
+    border: 1px solid #535353;
+
+    border-radius:  50%;
+
+    position:  relative;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.home6-work-process h3:after {
+
+    position:  absolute;
+
+    left: 60px;
+
+    top: 22px;
+
+    width: 289px;
+
+    height:  1px;
+
+    background: #535353;
+
+    content: "";
+
+}
+
+
+
+.home6-work-process h4 {
+
+    color:  #fff;
+
+    font-size:  20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+/*Image slide css*/
+
+.single-slide-box {
+
+    margin-bottom: 50px;
+
+    transition: .3s;
+
+}
+
+
+
+.single-slide-box:hover {
+
+    box-sizing: border-box;
+
+    box-shadow: 0 5px 15px #343434;
+
+}
+
+
+
+.img-slide-content h4 a {
+
+    color:  #fff;
+
+    font-size:  25px;
+
+}
+
+
+
+.img-slide-content {
+
+    padding: 35px 30px 10px;
+
+
+
+    transition: .3s;
+
+}
+
+
+
+.image-slide-wrap .owl-nav div {
+
+    position:  absolute;
+
+    left: -30px;
+
+    top: 50%;
+
+    margin-top:  -25px;
+
+    transition:  .3s;
+
+}
+
+
+
+.image-slide-wrap .owl-nav div.owl-next {
+
+    left:  auto;
+
+    right: -30px;
+
+}
+
+
+
+.image-slide-wrap .owl-nav i {
+
+    color:  #FDCF1E;
+
+    transition:  all .3s;
+
+    transform:  scale(1);
+
+}
+
+
+
+.image-slide-wrap .owl-nav i:hover {
+
+    transform:  scale(1.2);
+
+    color:  #DBDFE2;
+
+}
+
+
+
+.image-slide-wrap .owl-dots div {
+
+    background:  #ccc;
+
+    height: 10px;
+
+    width: 10px;
+
+    margin: 5px;
+
+    display:  inline-block;
+
+    border-radius: 50%;
+
+}
+
+
+
+.image-slide-wrap .owl-dots {
+
+    position:  absolute;
+
+    left:  50%;
+
+    margin-left: -22px;
+
+    bottom: 0;
+
+}
+
+
+
+.image-slide-wrap .owl-dots div.active {
+
+    background:  #FDCF1E;
+
+}
+
+
+
+/*project css*/
+
+.project-title {
+
+    font-size: 50px;
+
+    margin-bottom: 20px;
+
+}
+
+.project-shorting {
+
+    margin:  0;
+
+    padding:  0;
+
+    list-style:  none;
+
+}
+
+
+
+.project-shorting li {
+
+    display:  inline-block;
+
+    margin-right:  30px;
+
+    font-size:  19px;
+
+    margin-bottom: 65px;
+
+    cursor: pointer;
+
+}
+
+
+
+.project .sin-post-link {
+
+    margin-bottom:  20px;
+
+}
+
+
+
+/*project masonry css*/
+
+.project-masonry-bg {
+
+    position: relative;
+
+    z-index:  1;
+
+    margin-bottom:  30px;
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+
+.project-masonry-bg:after {
+
+    position:  absolute;
+
+    left:  0;
+
+    top:  0;
+
+    width:  100%;
+
+    height:  100%;
+
+    background: #000;
+
+    content:  "";
+
+    opacity: .7;
+
+    z-index:  -1;
+
+}
+
+
+
+.project-masonry-bg.single-project-masonry-3 {
+
+    height: 480px;
+
+}
+
+
+
+.project-masonry-bg.single-project-masonry-4 {
+
+    height:  338px;
+
+}
+
+
+
+.project-masonry-bg.single-project-masonry-1, .project-masonry-bg.single-project-masonry-2, .project-masonry-bg.single-project-masonry-5, .project-masonry-bg.single-project-masonry-8 {
+
+    height:  400px;
+
+}
+
+
+
+.project-masonry-bg.single-project-masonry-6 {
+
+    height: 380px;
+
+}
+
+
+
+.project-masonry-bg.single-project-masonry-7 {
+
+    height: 450px;
+
+}
+
+
+
+.project-masonry-bg.single-project-masonry-9 {
+
+    height: 320px;
+
+}
+
+
+
+.project-masonry-bg .post-block-content {
+
+    color:  #fff;
+
+    position:  absolute;
+
+    left:  0;
+
+    bottom:  0;
+
+    width:  100%;
+
+    padding-left: 30px;
+
+}
+
+
+
+.project-masonry-bg .post-block-content h4 a {
+
+    color: #fff;
+
+}
+
+
+
+.project-masonry-bg .post-date {
+
+    margin-top: 10px;
+
+}
+
+
+
+/*Product details page css*/
+
+.product-slide-wrap .owl-nav div {
+
+    position:  absolute;
+
+    left: 40px;
+
+    top:  50%;
+
+    margin-top:  -25px;
+
+    color:  #fff;
+
+    font-size:  25px;
+
+    transition:  .3s;
+
+}
+
+
+
+.product-slide-wrap .owl-nav div.owl-next {
+
+    left:  auto;
+
+    right: 40px;
+
+}
+
+
+
+.product-slide-wrap .owl-nav div:hover {
+
+    color: #eee;
+
+    font-size: 28px;
+
+}
+
+
+
+.product-slide-wrap .owl-dots div {
+
+    background:  #ccc;
+
+    height: 12px;
+
+    width: 3px;
+
+    display:  inline-block;
+
+    margin: 4px;
+
+}
+
+
+
+.product-slide-wrap .owl-dots {
+
+    position:  absolute;
+
+    left:  50%;
+
+    margin-left: -22px;
+
+    bottom: 15px;
+
+}
+
+
+
+.product-slide-wrap .owl-dots div.active {
+
+    height:  15px;
+
+    background: #fff;
+
+}
+
+
+

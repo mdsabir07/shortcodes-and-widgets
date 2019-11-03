@@ -1,0 +1,541 @@
+/*
+CSS Indexing
+=> Default CSS
+=> Statics number area CSS
+=> Overlay bg section CSS
+=> Slider addon CSS
+=> Call to Action addon CSS
+=> Logo Carousel addon CSS
+=> Service addon CSS
+=> Testimonial addon CSS
+=> Tile gallery addon CSS
+=> Promo box addon CSS
+=> Project addon CSS
+*/
+
+/*====== Default CSS ========*/
+ .vc_row {
+     overflow-x: hidden;
+}
+ .vc_custom_1522774508521 h1 {
+     font-size: 36px;
+}
+/*====== Statics number area CSS =========*/
+ .vc_row.overlay {
+     z-index: 1;
+     background-size: cover;
+     background-position: center !important;
+     background-color: #ddd;
+     position: relative;
+     color: #fff;
+}
+ .vc_row.overlay:after {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: #203139;
+     content: "";
+     display: block;
+     opacity: .9;
+     z-index: -1;
+}
+ .wpb_single_image.static-img img {
+     max-height: 205px;
+     max-width: 425px;
+     object-fit: cover;
+}
+ .wpb_text_column.static-area h1 {
+     font-size: 36px;
+     margin-bottom: 30px;
+}
+ .wpb_text_column.static-area {
+     font-size: 17px;
+     line-height: 2;
+}
+ .overlay .stockmsiit-btn .bordered-btn {
+     margin-top: 0;
+     margin-right: 0;
+     margin-bottom: 50px;
+     font-size: 20px;
+}
+ .overlay .stockmsiit-btn:hover .bordered-btn {
+     color: #fff;
+     opacity: .8;
+}
+ .stockmsiit-stat h1 {
+     color: #1E8BC3;
+     font-size: 48px;
+}
+ .stockmsiit-stat {
+     font-size: 18px;
+}
+/*====== Overlay bg section CSS =========*/
+ .vc_row.overlay-bg {
+     position: relative;
+     z-index: 1;
+}
+ .vc_row.overlay-bg:after {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: #1e8bc3;
+     content: "";
+     display: block;
+     opacity: .9;
+     z-index: -1;
+}
+ .vc_row.overlay-bg h2 {
+     color: #fff;
+     font-size: 30px;
+     font-family: noto-serif;
+     text-align: center;
+}
+/*====== Slideer addon CSS ========*/
+ .single-slide-item {
+     background-size: cover;
+     background-position: center;
+     background-color: #333;
+     color: #fff;
+     position: relative;
+     height: 730px;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 22px;
+}
+ .slide-overlay {
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+}
+ .single-slide-item h2 {
+     font-size: 55px;
+     margin-bottom: 15px;
+}
+/*slider carousel css*/
+ .stockmsiit-slides .owl-nav div {
+     position: absolute;
+     left: 30px;
+     top: 50%;
+     margin-top: -25px;
+     width: 74px;
+     text-align: center;
+     line-height: 74px;
+     font-size: 26px;
+     border-radius: 50%;
+     z-index: 1;
+     height: 74px;
+     opacity: 0;
+     visibility: hidden;
+     transition: .3s;
+}
+ .stockmsiit-slides .owl-nav div.owl-next {
+     left: auto;
+     right: 30px;
+}
+ .stockmsiit-slides .owl-nav div:after {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: #595957;
+     content: "";
+     z-index: -1;
+     border-radius: 50%;
+     transition: .3s;
+     opacity: 0;
+     visibility: hidden;
+}
+ .stockmsiit-slides .owl-nav div i {
+     color: #333333;
+     background: #fff;
+     width: 60px;
+     height: 60px;
+     display: block;
+     line-height: 60px;
+     border-radius: 50%;
+     margin: 7px;
+     transition: .3s;
+}
+ .stockmsiit-slides .owl-nav div i:hover {
+    background: #1E8BC3;
+    color: #fff;
+}
+ .stockmsiit-slides .owl-nav div:hover:after {
+     opacity: 1;
+     visibility: visible;
+}
+ .stockmsiit-slides:hover .owl-nav div {
+     opacity: 1;
+     visibility: visible;
+}
+/*====== Call to Action addon CSS ========*/
+ .stockmsiit-cta-box .bordered-btn {
+     color: #333;
+     margin-top: 12px;
+     font-size: 24px;
+}
+ .stockmsiit-cta-box .bordered-btn:after {
+     width: 75%;
+}
+ .stockmsiit-cta-box .bordered-btn:hover:after {
+     width: 100%;
+}
+ .stockmsiit-cta-box {
+     font-size: 20px;
+}
+ .stockmsiit-cta-box h2 {
+     font-size: 30px;
+}
+ .stockmsiit-cta-box.cta-box-2 {
+     background: #1E8BC3;
+     color: #fff;
+     font-size: 17px;
+     padding: 20px;
+     text-align: center;
+}
+ .stockmsiit-cta-box.cta-box-2 h2 {
+     font-size: 24px;
+     margin-bottom: 20px;
+}
+ .stockmsiit-cta-box.cta-box-2 .bordered-btn {
+     font-size: 14px;
+     color: #333;
+     background: #fff;
+     padding: 12px 25px;
+     border-radius: 3px;
+     text-transform: uppercase;
+     margin-bottom: 10px;
+     margin-left: 22px;
+}
+ .stockmsiit-cta-box.cta-box-2 .bordered-btn:after {
+     display: none;
+}
+/*====== Logo Carousel addon CSS ========*/
+ .stockmsiit-logo-carousel .owl-dots div {
+     background: #ddd;
+     height: 5px;
+     width: 30px;
+     display: inline-block;
+     margin: 5px;
+}
+ .stockmsiit-logo-carousel .owl-dots {
+     text-align: center;
+}
+ .stockmsiit-logo-carousel .owl-dots div.active {
+     background: #FFF334;
+}
+ .stockmsiit-logo-carousel .owl-nav div {
+     position: absolute;
+     left: -50px;
+     top: 50%;
+     margin-top: -25px;
+     font-size: 30px;
+     color: #DDDDDD;
+     transition: .3s;
+}
+ .stockmsiit-logo-carousel .owl-nav div.owl-next {
+     left: auto;
+     right: -50px;
+}
+ .stockmsiit-logo-carousel-item {
+     display: table;
+     width: 100%;
+     height: 85px;
+}
+ .stockmsiit-logo-carousel-item-tablecell {
+     display: table-cell;
+     vertical-align: middle;
+}
+/*====== Service addon CSS =========*/
+ .service-title h1 {
+     font-size: 35px;
+     color: #333;
+}
+ .stockmsiit-service-box {
+     border: 1px solid #E2EBEF;
+     position: relative;
+     padding-left: 25%;
+     transition: .3s;
+     margin-bottom: 30px;
+}
+ .stockmsiit-service-icon {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 25%;
+     height: 100%;
+     background-size: cover;
+     background-position: center !important;
+     background-color: #ddd;
+     transition: .3s;
+     border-right: 1px solid #DFE8ED;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 40px;
+     z-index: 1;
+     transition: .3s;
+}
+ .stockmsiit-service-content {
+     padding-left: 20px;
+}
+ .stockmsiit-service-icon img {
+     width: 40px;
+}
+ .stockmsiit-service-icon:after {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: #EDF4F7;
+     content: "";
+     z-index: -1;
+     transition: .3s;
+}
+ .stockmsiit-service-box:hover {
+     box-shadow: 0 10px 30px #eee;
+}
+ .stockmsiit-service-box:hover .stockmsiit-service-icon:after {
+     background: #1E8BC3;
+     opacity: .75;
+}
+ .stockmsiit-service-box:hover .stockmsiit-service-icon {
+     color: #fff;
+}
+ .stockmsiit-service-content h3 {
+     font-size: 20px;
+     margin-bottom: 15px;
+}
+ .stockmsiit-service-content {
+     font-size: 15px;
+     padding-top: 20px;
+     padding-bottom: 15px;
+}
+ .service-btn {
+     color: #1E8BC3;
+     font-size: 16px;
+     display: inline-block;
+     position: relative;
+     transition: .3s;
+}
+ .service-btn:after {
+     position: absolute;
+     right: -10px;
+     top: 0;
+     content: "\f105";
+     font-family: fontawesome;
+     transition: .3s;
+}
+ .stockmsiit-service-box:hover .service-btn {
+     text-decoration: underline;
+     color: #333;
+}
+ .service-btn:hover:after {
+     right: -15px;
+}
+/*====== Testimonial addon CSS =========*/
+ .single-testimonial-box h3 {
+     font-size: 22px;
+     margin-top: 25px;
+}
+ .single-testimonial-box span {
+     font-size: 16px;
+     margin-bottom: 30px;
+     display: block;
+}
+ .single-testimonial-box p {
+     font-style: italic;
+     font-size: 17px;
+}
+ .single-testimonial-box {
+     margin-bottom: 40px;
+}
+ .single-testimonial-box img {
+     width: 100%;
+}
+ .text-center p a {
+     color: #1E8BC3;
+     font-weight: 700;
+     transition: .3s;
+}
+ .text-center p a:hover {
+     color: #333;
+}
+/*====== Tile gallery addon CSS =========*/
+ .stockmsiit-tile-gallery {
+     margin-left: -1%;
+}
+ .tile-gallery-block {
+     margin-left: 1%;
+     width: 24%;
+     float: left;
+     background-size: cover;
+     background-position: center;
+     background-color: #ddd;
+     margin-bottom: 1%;
+}
+ .stockmsiit-tile-gallery-image-3 .tile-gallery-block-1, .stockmsiit-tile-gallery-image-7 .tile-gallery-block-1 {
+     width: 40%;
+}
+ .stockmsiit-tile-gallery-image-3 .tile-gallery-block-3, .stockmsiit-tile-gallery-image-7 .tile-gallery-block-3 {
+     width: 33%;
+}
+ .stockmsiit-tile-gallery-image-5 .tile-gallery-block.tile-gallery-block-1 {
+     width: 60%;
+}
+ .stockmsiit-tile-gallery-image-5 .tile-gallery-block.tile-gallery-block-2 {
+     width: 38%;
+}
+ .stockmsiit-tile-gallery-image-5 .tile-gallery-block {
+     width: 32.33333%;
+}
+ .stockmsiit-tile-gallery-image-6 .tile-gallery-block-1, .stockmsiit-tile-gallery-image-6 .tile-gallery-block-2 {
+     width: 49%;
+}
+/*====== Promo box addon CSS =========*/
+ .promo-box {
+     border: 1px solid #DFE8ED;
+     padding: 25px;
+}
+ .promo-box h3 {
+     font-size: 24px;
+     color: #333;
+}
+ .promo-box a {
+     color: #333;
+     font-size: 17px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
+ .promo-box .bordered-btn:after {
+     top: 30px;
+}
+ .bordered-btn.promo-btn:hover {
+     color: #555;
+}
+/*====== Project addon CSS =========*/
+ .vc_wp_custommenu ul, ul.stockmsiit-project-shortlist, #menu-projects {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+}
+ .vc_wp_custommenu li a, ul.stockmsiit-project-shortlist li, .m-bottom .stockmsiit-project-shortlist-2 li, #menu-projects li {
+     border: 1px solid #EDF2F5;
+     display: block;
+     padding: 15px;
+     color: #333;
+     font-weight: 700;
+     margin-bottom: 5px;
+     position: relative;
+}
+ #menu-projects li a {
+     color: #333;
+}
+ .vc_wp_custommenu li a:before, ul.stockmsiit-project-shortlist li:before, #menu-projects li:before {
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: 0;
+     background: #1E8BC3;
+     content: "";
+     transition: .3s;
+     opacity: 0;
+     visibility: hidden;
+}
+ .vc_wp_custommenu li:hover > a:before, ul.stockmsiit-project-shortlist li:hover:before, #menu-projects li:hover:before {
+     opacity: 1;
+     visibility: visible;
+     width: 5px;
+}
+ .vc_wp_custommenu li:hover > a, ul.stockmsiit-project-shortlist li:hover, #menu-projects li:hover {
+     background: #EDF4F7;
+}
+ .stockmsiit-project-shortlist li.active, .m-bottom .stockmsiit-project-shortlist-2 li.active {
+     background: #EDF4F7;
+}
+ .m-bottom .stockmsiit-project-shortlist-2 {
+     padding: 0;
+     list-style: none;
+     margin-bottom: 50px;
+     margin-left: 0;
+     cursor: pointer;
+}
+ .m-bottom .stockmsiit-project-shortlist-2 li {
+     display: inline-block;
+     margin-right: 4px;
+}
+ .single-work-box {
+     display: block;
+}
+ .m-bottom .col-lg-4 {
+     margin-bottom: 40px;
+}
+ .work-box-bg {
+     position: relative;
+     z-index: 1;
+     height: 300px;
+     background-size: cover;
+     background-position: center;
+     background-color: #ddd;
+}
+ .work-box-bg:after {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: #1E8BC3;
+     content: "";
+     z-index: -1;
+     opacity: 0;
+     transition: .3s;
+     visibility: hidden;
+}
+ .single-work-box:hover .work-box-bg:after {
+     opacity: .5;
+     visibility: visible;
+}
+ .work-box-bg i.fa {
+     background: #333;
+     height: 40px;
+     width: 40px;
+     color: #fff;
+     line-height: 40px;
+     text-align: center;
+     border-radius: 50%;
+     transition: .3s;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     margin-left: -20px;
+     margin-top: -20px;
+     opacity: 0;
+     visibility: hidden;
+     transition: .3s;
+}
+ .work-box-bg i.fa:hover {
+     background: #1E8BC3;
+}
+ .single-work-box:hover .work-box-bg i.fa {
+     opacity: 1;
+     visibility: visible;
+}
+ .single-work-box p {
+     color: #333333;
+     text-align: center;
+     font-weight: 700;
+     padding: 15px;
+     margin: 0;
+}
+ 
