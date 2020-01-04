@@ -152,6 +152,8 @@ final class Avocado_Elementor_Dependency {
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Avocado_ProductHovercard_Widget() );
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Avocado_ProductChoose_Widget() );
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Avocado_AjaxTab_Widget() );
+			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Avocado_SpacifiCat_Widget() );
+			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Avocado_StepCheckout_Widget() );
 		}
 	}
 }
@@ -162,18 +164,13 @@ function avocado_toolkit_scripts() {
     wp_enqueue_style( 'avacado-toolkit', plugin_dir_url( __FILE__ ) . '/toolkit.css', array(), '20151215' );
     
     wp_enqueue_script( 'slick', plugins_url('assets/js/slick.min.js', __FILE__ ), array('jquery'), 'v.1.9.0', true );
+    wp_enqueue_script( 'toolkit', plugins_url('assets/js/tookit.js', __FILE__ ), array('jquery'), 'v.1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'avocado_toolkit_scripts' );
 
 
-
-
-
-
-
 add_action('wp_ajax_my_ajax_action', 'my_ajax_function');
 add_action('wp_ajax_nopriv_my_ajax_action', 'my_ajax_function');
-
 
 function my_ajax_function() {
     

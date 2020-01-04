@@ -27,6 +27,7 @@
     font-weight: 400;
     font-family: 'Zhi Mang Xing', cursive;
     font-style: italic;
+    color: #fff;
 }
 
 .slide-content {
@@ -232,9 +233,9 @@ ul.slick-dots li.slick-active button {
     color: #000;
 }
 
-.category-product-price ins {
-    color: #E23709;
-    text-decoration: none;
+.category-product-price ins .amount {
+    color: #E23709 !important;
+    text-decoration: none !important;
 }
 
 .category-product-price {
@@ -276,9 +277,36 @@ body .woocommerce #respond input#submit, body .woocommerce a.button, body .wooco
 .product-carousel {
     position: relative;
     margin-top: -60px;
-    margin-bottom: -140px;
+    margin-bottom: -65px;
     z-index: 2;
 }
+
+/*Countdowun CSS*/
+div#timer div {
+    font-size: 25px;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border: 4px solid #668B42;
+    background: rgb(114, 172, 55);
+    border-radius: 50px;
+    line-height: 52px;
+    text-align: center;
+    margin: 0 5px;
+    color: rgb(47, 50, 21);
+    text-shadow: 1px 1px rgb(47, 50, 21);
+}
+
+div#timer div span {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-top: -10px;
+    color: rgb(114, 172, 55);
+    text-shadow: 1px 1px #ccc;
+    text-align: center;
+}
+
 
 /*Hovercard CSS*/
 .single-hc-product {
@@ -416,6 +444,24 @@ body .woocommerce #respond input#submit, body .woocommerce a.button, body .wooco
     top: 25px;
     color: #000;
 }
+
+.product-hovercard .yith-wcwl-add-to-wishlist {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin-top: 0;
+}
+
+.product-hovercard .yith-wcwl-add-to-wishlist i.fa {
+    color: #ccc;
+    transition: all ease .3s;
+}
+
+.product-hovercard .yith-wcwl-add-to-wishlist i.fa:hover {
+    color: #689418;
+}
+
+
 /*Product choose CSS*/
 .product-choose-wrapper {
     margin-bottom: 30px;
@@ -499,4 +545,221 @@ body .woocommerce #respond input#submit, body .woocommerce a.button, body .wooco
     font-size: 100px;
     opacity: .1;
     padding: 40px 0;
+}
+
+/*Spacific category CSS*/
+.product-sc-thumb {
+    background-size: cover;
+    height: 265px;
+    max-height: 100%;
+    background-position: center;
+    background-color: #E8ECEF;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.product-sc {
+    text-align: center;
+}
+
+.product-sc h4 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.sc-product-price.category-product-price .woocommerce-Price-amount {
+    font-size: 15px;
+    color: #000;
+}
+
+.product-sc-wrapper {
+    padding-bottom: 60px;
+}
+
+/*Step product CSS*/
+.steped-indicator ul#mytab, .steped-indicator ul#mytab li.nav-item {
+    display: inline-block;
+    border-bottom: none;
+    border-right: 2px solid #ddd;
+    margin-right: -4px;
+}
+
+.steped-indicator ul#mytab, .steped-indicator ul#mytab li.nav-item:last-child {
+    border-right: none;
+}
+
+.steped-indicator ul#mytab li.nav-item a.nav-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    transition: all ease .5s;
+    border: none;
+    background: #eee;
+    border-radius: 0;
+}
+
+.steped-indicator ul#mytab li.nav-item a.nav-link.active {
+    background: #689418;
+    border-radius: 0;
+    color: #fff;
+}
+
+.step-header-text, .step-title {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.boxed-product-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 180px;
+}
+
+.step-two-box h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    background: #ddd;
+    padding: 5px 15px;
+}
+
+.box-single-product {
+    background: #eee;
+    padding: 5px 40px;
+    margin-bottom: 20px;
+}
+
+.box-single-product h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.step-two-content h2 {
+    font-size: 25px;
+}
+
+.step-1-columns .col:first-child {
+    padding-right: 70px;
+    border-right: 1px solid #ddd;
+}
+
+.step-1-columns .col:last-child {
+    padding-left: 70px;
+}
+
+.step-1-product-title h3 {
+    margin-top: 20px;
+}
+
+.step-1-product-price {
+    margin-bottom: 15px;
+}
+
+.step-header-text {
+    padding-bottom: 20px;
+}
+
+.box-single-product h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.staped-checkout .button.add_to_cart_button.added {
+    position: relative;
+    transition: all ease .5s;
+    padding-right: 35px;
+}
+
+.staped-checkout .button.add_to_cart_button.added:after {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    content: "\f00c";
+    font-family: fontawesome;
+    font-weight: 300;
+}
+
+.staped-checkout .added_to_cart.wc-forward {
+    display: none;
+}
+
+.bordered-btn {
+    display: inline-block;
+    border: 2px solid #689418;
+    padding: 5px 10px;
+    color: #689418;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all ease .5s;
+    margin-top: 10px;
+}
+
+.bordered-btn:hover {
+    border-color: #000;
+    color: #000;
+}
+
+.step-3-product-img {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.step-3-product-content p {
+    margin-bottom: 10px;
+}
+
+.step-3-product-price .woocommerce-Price-amount.amount {
+    font-weight: 500;
+}
+
+.step-3-product-price {
+    margin-bottom: 10px;
+}
+
+.step-3-product-price ins {
+    color: #f00 !important;
+    display: inline-block;
+}
+
+.checkout-bar {
+    width: 70%;
+    margin: 0 auto;
+    background: #ddd;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.checkout-bar .bordered-btn {
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.checkout-bar {
+    font-weight: bold;
+    font-size: 25px;
+    color: #000;
+}
+
+.staped-checkout .woocommerce a.button {
+    padding: 7px 20px;
+    display: inline-block;
+}
+
+.staped-checkout .woocommerce a.button.product_type_variable {
+    margin-top: 5px;
+}
+.staped-checkout .woocommerce a.button.product_type_grouped {
+    margin-top: 15px;
+}
+
+.step-3-product {
+    margin-bottom: 30px;
 }

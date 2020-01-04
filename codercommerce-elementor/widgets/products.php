@@ -73,7 +73,7 @@ class Codercommerce_Products_Widget extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => '4',
 				'options' => [
-					'1'  => __( '1 Column', 'plugin-domain' ),
+					'1' => __( '1 Column', 'plugin-domain' ),
 					'2' => __( '2 Columns', 'plugin-domain' ),
 					'3' => __( '3 Columns', 'plugin-domain' ),
 					'4' => __( '4 Columns', 'plugin-domain' ),

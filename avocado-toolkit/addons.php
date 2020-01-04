@@ -492,24 +492,24 @@ if (class_exists('WooCommerce')) {
 
                         if(!empty($thumb_id)) {
                             if($settings['bg'] == 'yes') {
-                                $html .= '<div class="cat-img cat-img-bg" style="background-image:url('.$term_img.')"></div>';
+                                $html .= '<a href="'.get_the_permalink($info->term_id).'" class="cat-img cat-img-bg" style="background-image:url('.$term_img.')"></a>';
                             } else {
                                 $html .='
                                 <div class="row cat-img">
                                     <div class="col text-center">
-                                        <img src="'.$term_img.'" alt="'.$info->name.'"/>
+                                        <a href="'.get_the_permalink($info->term_id).'"><img src="'.$term_img.'" alt="'.$info->name.'"/></a>
                                     </div>
                                 </div>';
                             }
                             
                         } else {
-                            $html .= '<div class="cat-no-thumb"><p>No thumbnail</p></div>';
+                            $html .= '<a  href="'.get_the_permalink($info->term_id).'" class="cat-no-thumb"><p>No thumbnail</p></a>';
                         }
                         
 
                         $html .='
 
-                        <h3>'.$info->name.'</h3>
+                        <a href="'.get_the_permalink($info->term_id).'"><h3>'.$info->name.'</h3></a>
                         '.$info->description.'
                     </div>';
                 }
@@ -746,8 +746,18 @@ if (class_exists('WooCommerce')) {
 							</div>
 						</div>
 						<div class="col my-auto text-center pc-info">
-							<div class="category-product-info">
-								<h3>'.get_the_title().'</h3>
+							<div class="category-product-info">';
+								if ( $product->is_on_sale() ) {
+									$html .= '
+									<div id="timer">
+										<div id="days"></div>
+										<div id="hours"></div>
+										<div id="minutes"></div>
+										<div id="seconds"></div>
+									</div>';
+								}
+								$html .= '
+								<a href="'.get_the_permalink().'"><h3>'.get_the_title().'</h3></a>
 								<div class="category-product-price">'.$product->get_price_html().'</div>';
 								if ($average = $product->get_average_rating()) {
 									$html .= '<div class="category-star-rating"><div class="star-rating" title="'.sprintf(__( 'Rated %s out of 5', 'woocommerce' ), $average).'"><span style="width:'.( ( $average / 5 ) * 100 ) . '%"><strong itemprop="ratingValue" class="rating">'.$average.'</strong> '.__( 'out of 5', 'woocommerce' ).'</span></div></div>';
@@ -901,6 +911,126 @@ if (class_exists('WooCommerce')) {
 			$html .= '</div>';
 
 			if ($settings['from'] == 'category' && empty($settings['cat_ids'])) {
+				$html = '<div class="alert alert-warning">
+					<p>Please select product category</p>
+				</div>';
+			}
+
+			echo $html;
+		}
+	}
+
+
+	class Avocado_SpacifiCat_Widget extends \Elementor\Widget_Base {
+		public function get_name() {
+			return 'avocado-spacificcat';
+		}
+
+		public function get_title() {
+			return 'Avocado Spacific Category';	
+		}
+
+		public function get_icon() {
+			return 'fa fa-code';	
+		}
+
+		public function get_categories() {
+			return 'general';	
+		}
+
+		protected function _register_controls() {
+
+			$this->start_controls_section(
+				'content_section',
+				[
+					'label'	=> __('Configuration', 'avocado-toolkit'),
+					'tab'	=> \Elementor\Controls_Manager::TAB_CONTENT,
+				]
+			);
+
+			$this->add_control(
+                'count',
+                [
+                    'label' => __( 'Product limit', 'avocado-toolkit' ),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default'	=> '4',
+                ]
+            );
+
+            $this->add_control(
+                'columns',
+                [
+                    'label' => __( 'Columns', 'avocado-toolkit' ),
+                    'type' => \Elementor\Controls_Manager::SELECT,
+                    'default' => '4',
+                    'options' => [
+                        '4'  => __( '4 Columns', 'avocado-toolkit' ),
+                        '3'  => __( '3 Columns', 'avocado-toolkit' ),
+                        '2'  => __( '2 Columns', 'avocado-toolkit' ),
+                        '1'  => __( '1 Columns', 'avocado-toolkit' ),
+                    ],
+                ]
+            );
+
+            $this->add_control(
+            	'cat_ids',
+            	[
+            		'label'	=> __('Select Categories', 'avocado-toolkit'),
+	            	'type'	=> \Elementor\Controls_Manager::SELECT,
+	            	'multiple'	=> 'true',
+	            	'options'	=> avocado_product_cat_list(),
+            	]
+            );
+
+            $this->end_controls_section();
+		}
+
+		protected function render() {
+			$settings = $this->get_settings_for_display();
+
+			$q = new WP_Query( array(
+				'post_type'	=> 'product', 
+				'posts_per_page' => $settings['count'],
+				'tax_query'	=> array(
+					array(
+						'taxonomy'	=> 'product_cat',
+						'field'		=> 'term_id',
+						'terms'		=> $settings['cat_ids']
+					)
+				),
+			) );
+
+			if($settings['columns'] == '4') {
+                $columns_markup = 'col-lg-3';
+            } else if($settings['columns'] == '3') {
+                $columns_markup = 'col-lg-4';
+            } else if($settings['columns'] == '2') {
+                $columns_markup = 'col-lg-6';
+            } else {
+                $columns_markup = 'col';
+            }
+			
+
+			$html = '
+			
+			<div class="row product-sc-wrapper">';
+			while($q->have_posts()) : $q->the_post();
+				global $product;
+
+				$html .= '
+				<div class="'.$columns_markup.' single-sc-product">
+					<a href="'.get_permalink().'" class="product-sc">
+						<div class="product-sc-thumb" style="background-image:url('.get_the_post_thumbnail_url( get_the_ID(), 'medium' ).')"></div>
+						<h4>'.get_the_title().'</h4>
+						<div class="sc-product-price category-product-price">'.$product->get_price_html().'</div>
+					</a>
+				</div>';
+				
+			endwhile; wp_reset_query();
+
+			$html .= '</div>';
+
+			if (empty($settings['cat_ids'])) {
 				$html = '<div class="alert alert-warning">
 					<p>Please select product category</p>
 				</div>';
@@ -1160,6 +1290,336 @@ if (class_exists('WooCommerce')) {
 	}
 
 
+	class Avocado_StepCheckout_Widget extends \Elementor\Widget_Base {
+		public function get_name() {
+			return 'stepcheckout';
+		}
+
+		public function get_title() {
+			return 'Avocado Step Checkout';
+		}
+
+		public function get_icon() {
+			return 'fa fa-code';
+		}
+
+		public function get_categories() {
+			return 'general';
+		}
+
+		protected function _register_controls() {
+
+			$this->start_controls_section(
+				'content_section',
+				[
+					'label'	=> __( 'Step One Configuration', 'avocado-toolkit' ),
+					'tab'	=> \Elementor\Controls_Manager::TAB_CONTENT,
+				]
+			);
+
+			$this->add_control(
+				'top_text',
+				[
+					'label'	=> __( 'Top text', 'avocado-toolkit' ),
+					'type'	=> \Elementor\Controls_Manager::WYSIWYG,
+					'default'	=> '<h2>Select your Starter Kit</h2>',
+				]
+			);
+
+			$this->add_control(
+				'base_products',
+				[
+					'label'	=> __( 'Select Base Product', 'avocado-toolkit' ),
+					'type'	=> \Elementor\Controls_Manager::SELECT2,
+					'multiple'	=> true,
+					'options'	=> avocado_product_list(),
+					'label_block' => true,
+				]
+			);
+
+			$this->end_controls_section();
+
+			$this->start_controls_section(
+				'step_two_configuration',
+				[
+					'label'	=> __( 'Step Two Configuration', 'avocado-toolkit' ),
+					'tab'	=> \Elementor\Controls_Manager::TAB_CONTENT,
+				]
+			);
+
+			$this->add_control(
+				'step_two_title',
+				[
+					'label'	=> __( 'Step two title', 'avocado-toolkit' ),
+					'type'	=> \Elementor\Controls_Manager::TEXT,
+					'default'	=> 'Choose Candle holders, vases, & pillows',
+					'label_block' => true,
+				]
+			);
+
+			$this->add_control(
+				'step_two_content',
+				[
+					'label'	=> __( 'Step two content', 'avocado-toolkit' ),
+					'type'	=> \Elementor\Controls_Manager::WYSIWYG,
+					'default'	=> '<h2>Summer Elevated Kit $199.00</h2>',
+					'label_block' => true,
+				]
+			);
+
+			$this->add_control(
+				'step_two_img',
+				[
+					'label'	=> __( 'Step two image', 'avocado-toolkit' ),
+					'type'	=> \Elementor\Controls_Manager::MEDIA,
+				]
+			);
+
+			$repeater = new \Elementor\Repeater();
+			$repeater->add_control(
+				'box_title', [
+					'label' => __( 'Box Title', 'avocado-toolkit' ),
+					'type' => \Elementor\Controls_Manager::TEXT,
+					'default' => __( 'Box Title' , 'avocado-toolkit' ),
+					'label_block' => true,
+				]
+			);
+
+			$repeater->add_control(
+				'box_product_ids',
+				[
+					'label'	=> __( 'Select Box Product', 'avocado-toolkit' ),
+					'type'	=> \Elementor\Controls_Manager::SELECT2,
+					'multiple'	=> true,
+					'options'	=> avocado_product_list(),
+					'label_block' => true,
+				]
+			);
+
+			$this->add_control(
+				'step_two_boxes',
+				[
+					'label'	=> __( 'Product Boxes', 'avocado-toolkit' ),
+					'type'	=> \Elementor\Controls_Manager::REPEATER,
+					'fields'=> $repeater->get_controls(),
+					'default'	=> [
+						[
+							'title'	=> __( 'Box title', 'avocado-toolkit' ),
+						]
+					],
+					'title_field'	=> '{{{ title }}}',
+				]
+			);
+			$this->end_controls_section();
+
+			$this->start_controls_section(
+				'step_three_configuration',
+				[
+					'label'	=> __( 'Step Three Configuration', 'avocado-toolkit' ),
+					'tab'	=> \Elementor\Controls_Manager::TAB_CONTENT,
+				]
+			);
+
+			$this->add_control(
+				'step_three_title',
+				[
+					'label'	=> __( 'Step three title', 'avocado-toolkit' ),
+					'type'	=> \Elementor\Controls_Manager::TEXT,
+					'default'	=> 'Choose add-ons',
+					'label_block' => true,
+				]
+			);
+
+			$this->add_control(
+				'step_three_products',
+				[
+					'label'	=> __( 'Select Step three products', 'avocado-toolkit' ),
+					'type'	=> \Elementor\Controls_Manager::SELECT2,
+					'multiple'	=> true,
+					'options'	=> avocado_product_list(),
+					'label_block' => true,
+				]
+			);
+			$this->end_controls_section();
+		}
+
+		protected function render() {
+
+			$settings = $this->get_settings_for_display();
+
+			$html = '
+			<script>
+				jQuery(document).ready(function($) {
+					$("#step-chckout-1, .step-1-product-btn a.button").on("click", function() {
+						$(\'.nav-tabs a[href="#step-chckout-2"]\').tab("show");
+						$("html, body").animate({ scrollTop: 0 }, "slow");
+						$(\'.nav-tabs a[href="#step-chckout-2"], .nav-tabs a[href="#step-chckout-3"], .nav-tabs a[href="#step-chckout-4"]\').attr("data-toggle", "tab");
+					});
+
+					$(".next-step-link a").on("click", function() {
+						$(\'.nav-tabs a[href="#step-chckout-3"]\').tab("show");
+						$("html, body").animate({ scrollTop: 0 }, "slow");
+						return false;
+					});
+				});
+			</script>
+			<div class="staped-checkout">
+				<div class="steped-indicator text-center">
+					<ul class="nav nav-tabs mb-3" id="mytab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#step-chckout-1" role="tab" aria-controls="step-chckout-1" aria-selected="true">Step 1</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#step-chckout-2" role="tab" aria-controls="step-chckout-2" aria-selected="false">Step 2</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#step-chckout-3" role="tab" aria-controls="step-chckout-3" aria-selected="false">Step 3</a>
+						</li>
+						<!--<li class="nav-item">
+							<a class="nav-link" href="#step-chckout-4" role="tab" aria-controls="step-chckout-4" aria-selected="false">Step 4</a>
+						</li>-->
+					</ul>
+				</div>
+				<div class="tab-content" id="mytabContent">
+					<div class="tab-pane fade show active" id="step-chckout-1" role="tabpanel">
+						<div class="step-header-text text-center">'.do_shortcode( wpautop($settings['top_text']) ).'</div>';
+
+						if (!empty($settings['base_products'])) {
+							$html .= '<div class="row step-1-columns">';
+							foreach ($settings['base_products'] as $step_1_p) {
+								$_product = wc_get_product( $step_1_p );
+								$html .= '
+								<div class="col">
+									<div class="step-1-product">
+										<div class="step-1-product-img">
+											'.get_the_post_thumbnail($step_1_p, 'large').'
+										</div>
+										<div class="step-1-product-title">
+											<a href="'.get_the_permalink($step_1_p).'"><h3>'.get_the_title($step_1_p).'</h3></a>
+										</div>
+										<div class="step-1-product-content">
+											'.wpautop(get_post_field( 'post_content', $step_1_p )).'
+										</div>
+										<div class="step-1-product-price">
+											'.$_product->get_price_html().'
+										</div>
+										<div class="step-1-product-btn">
+											'.do_shortcode( '[add_to_cart style="" show_price="FALSE" id="'.$step_1_p.'"]' ).'
+										</div>
+									</div>
+								</div>
+								';
+							}
+							$html .= '</div>';
+						} else {
+							$html .= '<div class="alert alert-danger">No products added. Please add some products.</div>';
+						}
+						$html .= '
+					</div>
+					<div class="tab-pane fade" id="step-chckout-2" role="tabpanel">
+						<div class="step-header-text text-center"><h2 class="step-title">'.$settings['step_two_title'].'</h2></div>
+						<div class="row">
+							<div class="col">
+								<img src="'.wp_get_attachment_image_url($settings['step_two_img']['id'], 'large').'" alt="'.$settings['step_two_title'].'">
+							</div>
+							<div class="col">
+								<div class="step-two-content">
+									'.wpautop($settings['step_two_content']).'';
+
+									if (!empty($settings['step_two_boxes'])) {
+										foreach ($settings['step_two_boxes'] as $box) {
+											$html .= '<div class="step-two-box">
+												<h3>'.$box['box_title'].'</h3>';
+												if (!empty($box['box_product_ids'])) {
+													$html .= '<div class="row no-gutters">';
+													foreach ($box['box_product_ids'] as $box_product) {
+														$html .= '<div class="col">
+															<div class="box-single-product text-center">
+																<a href="'.get_the_permalink($box_product).'"><h4>'.get_the_title($box_product).'</h4></a>
+																<div class="boxed-product-bg" style="background-image:url('.get_the_post_thumbnail_url( $box_product, 'medium' ).')"></div>
+																<div class="boxed-product-btn">
+																	'.do_shortcode( '[add_to_cart style="" show_price="FALSE" id="'.$box_product.'"]' ).'
+																</div>
+															</div>
+														</div>';
+													}
+													$html .= '</div>';
+												}
+												$html .= '
+											</div>';
+										}
+									} else {
+										$html .= '<div class="alert alert-danger">No products added. Please add some products.</div>';
+									}
+									$html .= '
+									<div class="next-step-link text-right">
+										<a href="" class="bordered-btn">Next Step <i class="fa fa-angle-double-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="step-chckout-3" role="tabpanel">
+						<div class="step-header-text text-center">
+							<h2 class="step-title">'.$settings['step_three_title'].'</h2>
+						</div>';
+
+						if (!empty($settings['step_three_products'])) {
+							$html .= '<div class="row">';
+							foreach ($settings['step_three_products'] as $step_3_p) {
+								$_product = wc_get_product( $step_3_p );
+								$html .= '<div class="col-lg-3 col-md-3 col-sm-12">
+									<div class="step-3-product">
+										<div class="step-3-product-img">
+											'.get_the_post_thumbnail($step_3_p, 'full').'
+										</div>
+										<div class="step-3-product-title">
+											<a href="'.get_the_permalink($step_3_p).'"><h4>'.get_the_title($step_3_p).'</h4></a>
+										</div>
+										<div class="step-3-product-content">
+											'.wpautop(get_the_excerpt($step_3_p)).'
+										</div>';
+										if (!empty($_product->get_price_html())) {
+											$html .= '
+											<div class="step-3-product-price">Price: 
+												'.$_product->get_price_html().'
+											</div>
+											';
+										}
+										$html .= '
+										
+										<div class="step-3-product-btn">
+											'.do_shortcode( '[add_to_cart style="" show_price="FALSE" id="'.$step_3_p.'"]' ).'
+										</div>
+									</div>
+								</div>';
+							}
+							$html .= '</div>';
+						} else {
+							$html .= '<div class="alert alert-danger">No products added. Please add some products.</div>';
+						}
+
+						$html .= '
+						<div class="checkout-bar">
+							<div class="row">
+								<div class="col-lg-7 text-right my-auto">Ready to Checkout?</div>
+								<div class="col col-lg-5 my-auto">
+									<a href="'.get_page_link( wc_get_page_id('checkout') ).'?steps=true" class="bordered-btn text-uppercase">Checkout</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			';
+
+			$html .= '</div>';
+
+			echo $html;
+		}
+	}
+
+
 
 
 }
+
