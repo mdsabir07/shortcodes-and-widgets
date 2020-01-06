@@ -276,7 +276,7 @@ class Elementor_Slider_Widget extends \Elementor\Widget_Base {
 }
 
 /**
- * Elementor Section title Widget.
+ * Section title Widget.
  */
 class Avocado_SectionT_Widget extends \Elementor\Widget_Base {
 
@@ -309,7 +309,7 @@ class Avocado_SectionT_Widget extends \Elementor\Widget_Base {
 	}
 
 	/**
-	 * Register Slider widget controls.
+	 * Register Section widget controls.
 	 */
 	protected function _register_controls() {
 
@@ -362,6 +362,141 @@ class Avocado_SectionT_Widget extends \Elementor\Widget_Base {
 	}
 
 }
+
+/**
+ * Blog posts Widget.
+ */
+function avocado_post_cat_list( ) {
+    $elements = get_terms( 'category', array('hide_empty' => false) );
+    $post_cat_array = array();
+
+    if ( !empty($elements) ) {
+        foreach ( $elements as $element ) {
+            $info = get_term($element, 'category');
+            $post_cat_array[ $info->term_id ] = $info->name;
+        }
+    }
+    return $post_cat_array;
+}
+
+class Avocado_Posts_Widget extends \Elementor\Widget_Base {
+	/**
+	 * Get widget name.
+	 */
+	public function get_name() {
+		return 'avocado-posts';
+	}
+
+	/**
+	 * Get widget title.
+	 */
+	public function get_title() {
+		return __( 'Avocado Blog Posts', 'avocado-toolkit' );
+	}
+
+	/**
+	 * Get widget icon.
+	 */
+	public function get_icon() {
+		return 'fa fa-code';
+	}
+
+	/**
+	 * Get widget categories.
+	 */
+	public function get_categories() {
+		return [ 'general' ];
+	}
+
+	/**
+	 * Register Section widget controls.
+	 */
+	protected function _register_controls() {
+
+		$this->start_controls_section(
+			'content_section',
+			[
+				'label' => __( 'Content', 'avocado-toolkit' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'count',
+			[
+				'label' => __( 'Post count', 'avocado-toolkit' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => '5',
+			]
+		);
+
+        $this->add_control(
+            'cat_ids',
+            [
+                'label' => __( 'Select Categories', 'avocado-toolkit' ),
+                'type' => \Elementor\Controls_Manager::SELECT2,
+                'multiple' => true,
+                'options' => avocado_post_cat_list()
+            ]
+        );
+
+		$this->end_controls_section();
+
+	}
+
+	/**
+	 * Render Blog posts widget output on the frontend.
+	 *
+	 */
+	protected function render() {
+
+		$settings = $this->get_settings_for_display();
+
+		if ($settings['cat_ids']) {
+			$q = new WP_Query( array(
+				'post_type'	=> 'post', 
+				'posts_per_page' => $settings['count'],
+				'tax_query'	=> array(
+					array(
+						'taxonomy'	=> 'category',
+						'field'		=> 'term_id',
+						'terms'		=> $settings['cat_ids']
+					)
+				),
+			) );
+		} else {
+			$q = new WP_Query( array(
+				'post_type'	=> 'post', 
+				'posts_per_page' => $settings['count']
+			) );
+		}
+
+		$html = '<div class="row no-gutters">';
+		while($q->have_posts()) : $q->the_post();
+			$post_id = get_the_ID();
+
+			$html .= '
+			<div class="col text-center">
+				<div class="avocado-section-blog">
+					<div class="section-blog-img" style="background-image:url('.get_the_post_thumbnail_url($post_id, 'large').')"></div>
+					<div class="section-blog-content">
+						<h3 class="entry-title">
+							<a href="'.get_the_permalink($post_id).'">'.get_the_title( $post_id ).'</a>
+						</h3>
+						<p class="entry-date blog-date">'.get_the_date( 'd.m.Y' ).'</p>
+					</div>
+				</div>
+			</div>
+			';
+		endwhile; 
+		$html .= '</div>';
+		wp_reset_query();
+
+		echo $html;
+	}
+}
+
+
 
 
 /**
@@ -899,7 +1034,7 @@ if (class_exists('WooCommerce')) {
 					<div class="product-hovercard">
 						'.do_shortcode( '[yith_wcwl_add_to_wishlist]' ).'
 						<div class="product-hc-thumb" style="background-image:url('.get_the_post_thumbnail_url( get_the_ID(), 'medium' ).')"></div>
-						<h4>'.get_the_title().'</h4>
+						<a href="'.get_the_permalink().'"><h4>'.get_the_title().'</h4></a>
 						<div class="hc-product-price category-product-price">'.$product->get_price_html().'</div>
 						<div class="product-add-to-cart-category">'.do_shortcode( '[add_to_cart style="" show_price="FALSE" id="'.get_the_ID().'"]' ).'</div>
 						<span><i class="fa fa-angle-up"></i></span>

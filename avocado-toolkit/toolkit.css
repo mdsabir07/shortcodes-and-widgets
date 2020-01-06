@@ -112,6 +112,32 @@ ul.slick-dots li.slick-active button {
     color: #000;
 }
 
+/*Blog post CSS*/
+.section-blog-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+}
+
+.section-blog-content .entry-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.section-blog-content .entry-title a {
+    color: #000;
+}
+
+.section-blog-content {
+    margin-top: 20px;
+}
+
+.avocado-section-blog {
+    margin: 0 2px !important;
+}
+
 /*section title CSS*/
 .product-section-title h2 {
     font-size: 40px;
