@@ -146,6 +146,7 @@ final class Avocado_Elementor_Dependency {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Slider_Widget() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Avocado_SectionT_Widget() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Avocado_Posts_Widget() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Avocado_Socials_Widget() );
 
 		if ( class_exists( 'WooCommerce' ) ) {
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Avocado_Categories_Widget() );

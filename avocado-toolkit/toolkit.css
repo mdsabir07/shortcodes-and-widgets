@@ -150,6 +150,22 @@ ul.slick-dots li.slick-active button {
     font-weight: 300;
 }
 
+/*Socials CSS*/
+.subscribe-socials .social-text {
+    font-size: 13px;
+}
+
+.social-icons i.fa {
+    font-size: 25px;
+    padding-right: 25px;
+    color: #636363;
+}
+
+.subscribe-socials {
+    background: #F4F7F8;
+    padding: 25px 0 20px;
+}
+
 /*Woocommerce CSS*/
 /*Category*/
 .cat-img img {

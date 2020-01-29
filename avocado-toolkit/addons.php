@@ -357,10 +357,137 @@ class Avocado_SectionT_Widget extends \Elementor\Widget_Base {
 				<p>'.$settings['sub_title'].'</p>
 			</div>
 		';
-		
+	}
+}
 
+/**
+ * Section title Widget.
+ */
+class Avocado_Socials_Widget extends \Elementor\Widget_Base {
+
+	/**
+	 * Get widget name.
+	 */
+	public function get_name() {
+		return 'avocado-socials';
 	}
 
+	/**
+	 * Get widget title.
+	 */
+	public function get_title() {
+		return __( 'Avocado Socials', 'avocado-toolkit' );
+	}
+
+	/**
+	 * Get widget icon.
+	 */
+	public function get_icon() {
+		return 'fa fa-code';
+	}
+
+	/**
+	 * Get widget categories.
+	 */
+	public function get_categories() {
+		return [ 'general' ];
+	}
+
+	/**
+	 * Register Section widget controls.
+	 */
+	protected function _register_controls() {
+
+		$this->start_controls_section(
+			'content_section',
+			[
+				'label' => __( 'Content', 'avocado-toolkit' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'text',
+			[
+				'label' => __( 'Text', 'avocado-toolkit' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => 'Default title',
+			]
+		);
+
+		$repeater = new \Elementor\Repeater();
+		$repeater->add_control(
+			'icon',
+			[
+				'label' => __( 'Social Icon', 'plugin-domain' ),
+				'type' => \Elementor\Controls_Manager::ICON,
+				'include' => [
+					'fa fa-facebook',
+					'fa fa-flickr',
+					'fa fa-google-plus',
+					'fa fa-instagram',
+					'fa fa-linkedin',
+					'fa fa-pinterest',
+					'fa fa-reddit',
+					'fa fa-twitch',
+					'fa fa-twitter',
+					'fa fa-vimeo',
+					'fa fa-youtube',
+				],
+				'default' => 'fa fa-facebook',
+			]
+		);
+
+		$repeater->add_control(
+			'social_link', [
+				'label' => __( 'Social link', 'avocado-toolkit' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+			]
+		);
+
+		$this->add_control(
+			'icons',
+			[
+				'label' => __( 'Social Icons', 'avocado-toolkit' ),
+				'type' => \Elementor\Controls_Manager::REPEATER,
+				'fields' => $repeater->get_controls(),
+			]
+		);
+		$this->end_controls_section();
+	}
+
+	/**
+	 * Render Section title widget output on the frontend.
+	 *
+	 */
+	protected function render() {
+
+		$settings = $this->get_settings_for_display();
+
+		$html = '
+		<div class="row subscribe-socials">';
+			if (!empty($settings['text'])) {
+				$html .= '	
+				<div class="col-lg-7 col-md-7 col-sm-12 text-center">
+					<span class="social-text">'.$settings['text'].'</span>
+				</div>';
+			}
+			
+			if (!empty($settings['icons'])) {
+				$html .= '
+				<div class="col-lg-5 col-md-5 col-sm-12">
+					<div class="social-icons">';
+						foreach ($settings['icons'] as $icon) {
+							$html .= '
+							<a href="'.$icon['social_link'].'" target="_blank"><i class="'.$icon['icon'].'"></i></a>';
+						}
+					$html .= '
+					</div>
+				</div>';
+			}
+		$html .= '</div>';
+		echo $html;
+	}
 }
 
 /**

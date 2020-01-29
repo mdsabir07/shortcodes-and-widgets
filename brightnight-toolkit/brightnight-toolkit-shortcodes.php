@@ -1488,5 +1488,4 @@ function brightnight_project_masonry_shortcode($atts) {
 add_shortcode( 'brightnight_projects_masonry', 'brightnight_project_masonry_shortcode' );
 // End Brightnight project masonry shortcode
 
-http://4g.cafe7040.com/
 
