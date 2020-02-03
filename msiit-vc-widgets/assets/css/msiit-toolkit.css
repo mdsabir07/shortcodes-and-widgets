@@ -1,0 +1,81 @@
+.msiit-product-carousel .slick-list {
+    margin: 0 -10px;
+}
+
+.msiit_p_cats.slick-slide {
+    background: #fff;
+    margin: 0 10px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.msiit_p_cats .card__img {
+    width: 100%;
+}
+
+.msiit_p_cats a {
+    color: #222;
+    font-size: 16px;
+    display: inline-block;
+    width: 100%;
+    font-weight: 600;
+}
+
+.msiit_p_cats .star-rating {
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+}
+
+ul.msiit_p_cats__info li {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	padding: 0 10px 0px 10px;
+	color: #222;
+	text-transform: uppercase;
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+
+ul.msiit_p_cats__info li i {
+    display: block;
+    margin: 2px auto 0;
+    font-size: 20px;
+    color: #222;
+    height: 27px;
+    width: 50px;
+}
+
+ul.msiit_p_cats__info li:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 20px;
+    border-right: 1px solid #ddd;
+}
+
+ul.msiit_p_cats__info li:first-child:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.msiit-pruduct-carousel.slick-slider i.slick-arrow {
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    font-size: 30px;
+    color: #FFA500;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.msiit-pruduct-carousel.slick-slider i.fa.fa-angle-right.slick-arrow {
+    left: auto;
+    right: -25px;
+}
