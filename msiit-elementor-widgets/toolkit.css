@@ -1,0 +1,683 @@
+/*Tab slider*/
+.right-list ul li {
+    margin: 5px 0;
+    background: #ffe512;
+    display: inline-block;
+    color: #000;
+    font-weight: 700;
+    padding: 10px 15px 10px 30px;
+    border-radius: 5px;
+    width: 65%;
+    position: relative;
+}
+
+.right-list {
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.right-list ul li:after {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    content: "\f198";
+    font-family: fontawesome;
+}
+
+.tab-wrap.newtest-slider {
+    background: #F1F2F8;
+}
+.tab-content{
+    display: none;
+}
+ul.tab-titles li div {
+    bottom: -200px;
+    left: 0;
+    right: 0;
+    background: #05457F !important;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+
+ul.tab-titles li strong {
+    left: 0;
+    right: 0;
+    top: -50px;
+    font-size: 20px;
+    color:  #05457F !important;
+}
+
+ul.tab-titles li strong, ul.tab-titles li div {
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all ease .3s;
+    display: block;
+    width: 320px;
+    margin: 0 auto;
+    visibility: hidden;
+}
+
+ul.tab-titles li.active strong, ul.tab-titles li.active div, ul.tab-titles li.active:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+ul.tab-titles li {
+    display: inline-block;
+    margin: auto 5px;
+    height: 20px;
+    background: #ccc;
+    transform: translateY(-45%);
+    padding: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+ul.tab-titles {
+    background: #ccc;
+    height: 2px;
+}
+
+ul.tab-titles li:after {
+    position: absolute;
+    content: "";
+    left: -12px;
+    top: -3px;
+    width: 25px;
+    height: 25px;
+    border: 7px solid rgb(19, 181, 234);
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+    background: #fff;
+}
+
+.letf-inner-slide {
+    padding-top: 60px;
+    width: 60%;
+    margin: 0 auto;
+}
+.right-image {
+    background-size: cover;
+    background-position: center;
+    height: 660px;
+    background-color: #ddd;
+}
+.left-inner-title h3 {
+    color: #072E55 !important;
+    font-weight: 800;
+}
+
+.tab-left {
+    width: 65%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.sml {
+    margin-top: 35px;
+    font-size: 12px;
+}
+
+.sml span {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+
+/*Slider CSS*/
+.single-slider-item {
+    background-size: cover;
+    height: 600px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background-color: #ddd;
+}
+
+.single-slider-item, .single-slider-item a {
+    color: #fff !important;
+}
+
+.slide-content {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    background: rgba(0,0,0,.5);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.slick-slide .slide-content-box {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+.slick-slide.slick-current.slick-active .slide-content-box {
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	position: relative;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	perspective: perspective;
+	transform-style: preserve-3d;
+	-webkit-transition: all 1s ease-in-out 0.3s;
+    transition: all 1s ease-in-out 0.3s;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide-content p {
+    margin-bottom: 0;
+}
+
+.slide-content .slide-title {
+    color: #fff;
+    font-size: 42px;
+    line-height: 55px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+/*Button CSS*/
+.download-btn .boxed-btn {
+    background: #666;
+    color: #fff;
+}
+
+.download-btn .boxed-btn:hover {
+    background: #666;
+    border: 2px solid transparent;
+}
+
+.boxed-btn {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: .3em 1em;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    position: relative;
+    text-transform: capitalize;
+    color: #fff;
+    transition: all .2s;
+}
+
+.boxed-btn:after {
+    position: absolute;
+    content: "\f105";
+    font-family: fontawesome;
+    margin-left: -16px;
+    font-size: 25px;
+    transition: all 300ms ease 0ms;
+    opacity: 0;
+}
+
+.boxed-btn:hover:after {
+    opacity: 1;
+    margin-left: 0;
+    right: 15px;
+}
+
+.boxed-btn:hover {
+    padding: .3em 2em .3em .7em;
+    border: 2px solid transparent;
+    background: rgba(255,255,255,.2);
+}
+
+
+.slides.slick-slider i.slick-arrow {
+    position: absolute;
+    color: #fff;
+    font-size: 40px;
+    top: 50%;
+    margin-top: -25px;
+    left: 50px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s ease;
+}
+
+.slides.slick-slider i.fa-angle-right.slick-arrow {
+    left: auto;
+    right: 50px;
+}
+
+.slides.slick-slider:hover i.slick-arrow {
+	opacity: 1;
+	visibility: visible;
+}
+
+.slides .slick-dots {
+    bottom: 100px;
+    z-index: 2;
+}
+
+.slides .slick-dots li button {
+    background: #fff;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    opacity: .3;
+}
+
+.slides .slick-dots li button:before {
+    display: none;
+}
+
+.slides .slick-dots li {
+    width: 10px;
+    height: 10px;
+}
+
+.slides .slick-dots li.slick-active button {
+    opacity: 1;
+}
+
+/*Section Title CSS*/
+.section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
+    margin-bottom: 10px;
+    color: #13100d;
+}
+.section-title h1 {
+    font-size: 35px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+}
+
+.section-title h3 {
+    font-size: 25px;
+}
+
+.section-title h4 {
+    font-size: 22px;
+}
+
+.section-title h5 {
+    font-size: 20px;
+}
+
+.section-title h6 {
+    font-size: 18px;
+}
+
+/*Content Box CSS*/
+.contentbox-content h3 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 25px;
+}
+
+.contentbox-content h3, .contentbox-content a {
+    color: #ed1b24;
+    font-weight: 500;
+}
+
+/*Dealer info CSS*/
+.dealer-info-box p {
+    margin-bottom: 0;
+}
+
+.dealer-info-box .link {
+    padding: 10px 0;
+}
+
+.dealer-info-box .link a {
+    color: #ed1b24;
+}
+
+.dealer-info-box a {
+    color: #000;
+}
+
+.dealer-info-box {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ed1b24;
+}
+
+
+/*Tabs CSS*/
+.msiit-tabs {
+    border: 1px solid #ddd;
+}
+
+.msiit-tabs nav {
+    background: #F4F4F4;
+    border-radius: 0;
+}
+
+.msiit-tabs nav a.nav-link {
+    color: #000;
+    font-weight: 600;
+    border-radius: 0;
+}
+
+.msiit-tabs .tab-content {
+    padding: 20px;
+    background: #fff;
+}
+
+.msiit-tabs .tab-content p {
+    margin-bottom: 0;
+}
+
+/*Blog post CSS*/
+.section-blog-img {
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+}
+
+.section-blog-content .entry-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.section-blog-content {
+    margin-top: 20px;
+}
+
+.msiit-section-blog {
+    margin: 0 2px !important;
+}
+
+
+/*WooCommerce CSS*/
+.product-sc-thumb {
+    background-size: cover;
+    background-color: #ddd;
+    height: 390px;
+    background-position: center;
+}
+
+.single-sc-product {
+    margin-bottom: 40px;
+}
+
+/*Download Box CSS*/
+.download-box strong {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.download-btn {
+    margin-top: 15px;
+}
+
+/*Page list CSS*/
+.page-list h6 {
+    margin-bottom: 5px;
+}
+
+.p-list {
+    line-height: 2;
+}
+
+.p-list a {
+    color: #666 !important;
+}
+
+/*Testimonial CSS*/
+.testimonials-area {
+    background: #F0F0F0;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.testimonials-area .section-title {
+    margin-bottom: 50px;
+}
+
+.testimonial-top-content {
+    background: #fff;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #ccc;
+    padding: 50px 30px 0;
+}
+
+.testimonial-top-content h4 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.testimonial-top-content img {
+    width: 90px;
+    border-radius: 50%;
+    height: 90px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    bottom: -40px;
+    object-fit: cover;
+}
+
+.testimonial-top-content p {
+    margin-bottom: 0;
+}
+
+.testimonial-bottom-content {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.testimonial-bottom-content h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.testimonial-carousel .slick-slide, .testimonial-carousel .slick-dots li button {
+    opacity: .3;
+}
+
+.testimonial-carousel .slick-dots li.slick-active button {
+    opacity: 1;
+}
+
+.testimonial-carousel .slick-dots {
+    bottom: -70px;
+}
+
+.testimonial-carousel .slick-center {
+    opacity: 1;
+}
+
+.testimonial-carousel .slick-center .stars i {
+    color: #FFDF44;
+}
+
+
+/*Image box CSS*/
+.image-box-content strong {
+    display: block;
+    margin: 5px 0 10px;
+}
+
+.msiit-image-box img {
+    margin-top: 30px;
+}
+
+.image-boxes h4 {
+    margin-bottom: 5px;
+}
+
+/*Pricing CSS*/
+.pricing-area {
+    margin-bottom: -85px;
+}
+.pricing-box {
+    width: 31%;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+    background: #F8F8F8;
+    border-radius: 10px;
+}
+
+.pricing-box-inner h3 {
+    font-size: 32px;
+    position: relative;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.pricing-box-inner h3:after {
+    position: absolute;
+    content: "";
+    border-bottom: 5px dotted #ccc;
+    height: 3px;
+    width: 80px;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.pricing-box-inner ul li {
+    line-height: 2.5;
+}
+
+.pricing-box-inner ul {
+}
+
+.pricing-box-inner strong {
+    display: block;
+    font-size: 50px;
+    margin: 60px 0;
+}
+
+.pricing-box-inner {
+    padding: 60px 0;
+}
+
+.pricing-box.standered {
+    background: #333;
+    color: #fff;
+}
+
+.pricing-box.standered h3, .pricing-box.standered strong {
+    color: #FFDF44;
+}
+
+.pricing-area .section-title {
+    margin-bottom: 60px;
+}
+
+
+/*Testimonial CSS*/
+
+.testimonials-area {
+    background: #F0F0F0;
+    position: relative;
+    padding: 80px 0;
+}
+
+.testimonials-area .section-title {
+    margin-bottom: 50px;
+}
+
+.testimonial-top-content {
+    background: #fff;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #ccc;
+    padding: 50px 30px 0;
+}
+
+.testimonial-top-content h4 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.testimonial-top-content img {
+    width: 90px;
+    border-radius: 50%;
+    height: 90px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    bottom: -40px;
+    object-fit: cover;
+}
+
+.testimonial-top-content p {
+    margin-bottom: 0;
+}
+
+.testimonial-bottom-content {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.testimonial-bottom-content h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.testimonial-carousel .slick-slide, .testimonial-carousel .slick-dots li button {
+    opacity: .3;
+}
+
+.testimonial-carousel .slick-dots li.slick-active button {
+    opacity: 1;
+}
+
+.testimonial-carousel .slick-dots {
+    bottom: -70px;
+}
+
+.testimonial-carousel .slick-center {
+    opacity: 1;
+}
+
+.testimonial-carousel .slick-center .stars i {
+    color: #FFDF44;
+}
+
+.testimonial-top-content img {
+    border-radius: 50% !important;
+}
+
+.testimonial-carousel .slick-dots li button {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    background: #000;
+    border-radius: 50%;
+}
+
+.testimonial-carousel .slick-dots li button:before {
+    display: none;
+}
+
+.testimonial-carousel .slick-dots li {
+    width: 10px;
+    height: 10px;
+    margin: 0 2px;
+    line-height: 0px;
+}
+
