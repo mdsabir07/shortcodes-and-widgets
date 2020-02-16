@@ -337,7 +337,7 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 }
 
 /**
- * New Test Slider Widget.
+ * Tab Slider Widget.
  */
 class Msiit_TabtSlider_Widget extends \Elementor\Widget_Base {
 
@@ -437,7 +437,7 @@ class Msiit_TabtSlider_Widget extends \Elementor\Widget_Base {
 		<div class="tab-wrap newtest-slider">    
 			<div class="container-fluid">
 				<div class="row no-gutters">
-					<div class="col text-center">
+					<div class="col-lg-6 col-md-6 col-sm-12 text-center">
 						<div class="tab-left">
 							<div class="left-inner-title">
 								'.wpautop( do_shortcode( $settings['title_content'] ) ).'
@@ -453,12 +453,15 @@ class Msiit_TabtSlider_Widget extends \Elementor\Widget_Base {
 											$class = '';
 										}
 										$html .= '
-										<li class="'.$class.'"><a href="#'.$ttab['tab_id'].'">
-											<strong>'.$ttab['space_value'].'</strong>
-											<div class="">
-												'.$ttab['space_tt_content'].'
+										<li class="'.$class.'">
+											<a href="#'.$ttab['tab_id'].'"></a>
+											<div class="space-content">
+												
+													<strong>'.$ttab['space_value'].'</strong>
+													'.$ttab['space_tt_content'].'
+												
 											</div>
-										</a></li>';
+										</li>';
 									endforeach;
 									$html .= '
 								</ul>
@@ -470,7 +473,7 @@ class Msiit_TabtSlider_Widget extends \Elementor\Widget_Base {
 							</div>
 						</div>
 					</div>
-					<div class="col">
+					<div class="col-lg-6 col-md-6 col-sm-12">
 						<div class="tab-right">';
 							$x = 0;
 							foreach($settings['msiit_tabs'] as $ctab) :
@@ -481,7 +484,7 @@ class Msiit_TabtSlider_Widget extends \Elementor\Widget_Base {
 									$add_css = '';
 								}
 								$html .= '
-								<div id="'.$ctab['tab_id'].'" class="tab-content" '.$add_css.'>
+								<div id="'.$ctab['tab_id'].'" class="slider-tab-content" '.$add_css.'>
 									<div class="right-image" style="background-image:url('.wp_get_attachment_image_url( $ctab['tab_image']['id'], 'large' ).')">
 										<div class="right-list">
 											'.wpautop( $ctab['content_list'] ).'
@@ -807,7 +810,7 @@ class Msiit_DealerInfo_Widget extends \Elementor\Widget_Base {
 		$settings = $this->get_settings_for_display();
 
 		$html = '
-		<div class="dealer-info-box">';
+		<div class="dealer-info-box wow fadeInUp" data-wow-duration="2s">';
 			if (!empty($settings['dealer_info'])) {
 				$html .= '
 				'.wpautop( do_shortcode( $settings['dealer_info'] ) ).'';
@@ -996,7 +999,7 @@ class Msiit_DownloadB_Widget extends \Elementor\Widget_Base {
 		$settings = $this->get_settings_for_display();
 
 		$html = '
-		<div class="download-box">';
+		<div class="download-box wow fadeInUp" data-wow-duration="2s">';
 			if (!empty($settings['download_text'])) {
 				$html .= '<strong>'.$settings['download_text'].'</strong>';
 			}
