@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: MSIIT Elementor Addons
- * Description: This plugin use for hcforkcy theme. The plugin work only if installed Elementor page builder.
+ * Plugin Name: CoderMSIIT Addons
+ * Description: The plugin work only if installed Elementor page builder.
  * Version:     1.0.0
  * Author:      Sabirul Islam
  * Author URI:  https://codermsiit.com/
@@ -140,39 +140,24 @@ final class Msiit_Elementor_Dependency {
 	 * Init Widgets
 	 */
 	public function init_widgets() {
+
 		// Include Widget files
 		require_once( __DIR__ . '/addons.php' );
+
 		// Register widget
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Slider_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_TabtSlider_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_SectionT_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_ContentBox_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_About_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_DealerInfo_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_DownloadB_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_PageList_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Tabs_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Pricing_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Testimonial_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Posts_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_ImgBox_Widget() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Services_Widget() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Accordion_Widget() );
 
-		if ( class_exists( 'WooCommerce' ) ) {
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_SpacifiCat_Widget() );
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Categories_Widget() );
-		}
 	}
 }
 Msiit_Elementor_Dependency::instance();
 
 function msiit_toolkit_scripts() {
-	// wp_enqueue_style( 'slick', plugin_dir_url( __FILE__ ) . 'assets/css/slick.css', array(), 'v.1.9.0' );
-	// wp_enqueue_style( 'slick-theme', plugin_dir_url( __FILE__ ) . 'assets/css/slick-theme.css', array(), 'v.1.9.0' );
-	wp_enqueue_style( 'animate', plugin_dir_url( __FILE__ ) . 'assets/css/animate.min.css', array(), 'v.1.9.0' );
+
     wp_enqueue_style( 'msiit-toolkit', plugin_dir_url( __FILE__ ) . '/toolkit.css', array(), 'v.1.0.0' );
     
-    // wp_enqueue_script( 'slick', plugins_url('assets/js/slick.min.js', __FILE__ ), array('jquery'), 'v.1.9.0', true );
-    wp_enqueue_script( 'wow', plugins_url('assets/js/wow.min.js', __FILE__ ), array('jquery'), 'v.1.9.0', true );
     wp_enqueue_script( 'toolkit', plugins_url('assets/js/tookit.js', __FILE__ ), array('jquery'), 'v.1.0.0', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'msiit_toolkit_scripts' );

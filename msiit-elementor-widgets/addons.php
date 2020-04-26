@@ -32,7 +32,7 @@ function msiit_page_list() {
 }
 
 /**
- * Elementor Slider Widget.
+ * Slider Widget.
  */
 class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 
@@ -315,12 +315,18 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 						<div class="container">
 							<div class="row justify-content-center text-center">
 								<div class="col col-auto">
-									<div class="slide-content-box">
+									<div class="slide-content-box">';
+									    if(!empty($slide['title'])) :
+									    $html .= '
 										<div class="slide-content" style="font-size:'.$slide['font_size'].'px">
 											<h'.$slide['heading'].' class="slide-title">'.$slide['title'].'</h'.$slide['heading'].'>
 											'.wpautop( do_shortcode( $slide['content'] ) ).'
-										</div>
-										<a href="'.$slide['slide_link'].'" class="boxed-btn">'.$slide['slide_btn_text'].'</a>
+										</div>';
+										endif; if(!empty($slide['slide_link'])) :
+										$html .= '
+										<a href="'.$slide['slide_link'].'" class="boxed-btn">'.$slide['slide_btn_text'].'</a>';
+										endif;
+										$html .= '
 									</div>
 								</div>
 							</div>
@@ -699,6 +705,25 @@ class Msiit_ContentBox_Widget extends \Elementor\Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'content_btn',
+			[
+				'label' => __( 'Button text', 'msiit-toolkit' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => 'Read more',
+			]
+		);
+
+		$this->add_control(
+			'btn_link',
+			[
+				'label' => __( 'Button link', 'msiit-toolkit' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+			]
+		);
+
+
+
 		$this->end_controls_section();
 
 	}
@@ -708,9 +733,12 @@ class Msiit_ContentBox_Widget extends \Elementor\Widget_Base {
 		$settings = $this->get_settings_for_display();
 
 		$html = '
-		<div class="single-content-box wow fadeInUp" data-wow-duration="2s">';
+		<div class="single-content-box text-center wow fadeInUp" data-wow-duration="2s">';
 			if (!empty($settings['content_img_link'])) {
-				$html .= '<a href="'.$settings['content_img_link'].'"><img src="'.wp_get_attachment_image_url( $settings['content_img']['id'], 'full' ).'" alt="'.$settings['content_title'].'" title="'.$settings['content_title'].'"></a>';
+				$html .= '
+				<a href="'.$settings['content_img_link'].'">
+					<img src="'.wp_get_attachment_image_url( $settings['content_img']['id'], 'full' ).'" alt="'.$settings['content_title'].'" title="'.$settings['content_title'].'">
+				</a>';
 			}
 			$html .= '
 			<div class="contentbox-content">';
@@ -721,8 +749,164 @@ class Msiit_ContentBox_Widget extends \Elementor\Widget_Base {
 				if (!empty($settings['sub_title'])) {
 					$html .= ''.wpautop( do_shortcode( $settings['sub_title'] ) ).'';
 				}
+				if (!empty($settings['btn_link'])) {
+					$html .= '<a href="'.esc_url( $settings['btn_link'] ).'" class="readmore-btn">'.esc_html( $settings['content_btn'] ).'</a>';
+				}
 				$html .= '
 			</div>
+		</div>';
+
+		echo $html;
+	}
+}
+
+/**
+ * About section Widget.
+ */
+class Msiit_About_Widget extends \Elementor\Widget_Base {
+
+	public function get_name() {
+		return 'msiit-aboutus';
+	}
+
+	public function get_title() {
+		return __( 'About section', 'msiit-toolkit' );
+	}
+
+	public function get_icon() {
+		return 'fa fa-code';
+	}
+
+	public function get_categories() {
+		return [ 'general' ];
+	}
+
+	protected function _register_controls() {
+
+		$this->start_controls_section(
+			'content_section',
+			[
+				'label' => __( 'Content', 'msiit-toolkit' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'about_img',
+			[
+				'label' => __( 'Upload Image', 'msiit-toolkit' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+			]
+		);
+
+		$this->add_control(
+			'about_sub_title',
+			[
+				'label' => __( 'Sub Title', 'msiit-toolkit' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => 'Default title',
+			]
+		);
+
+		$this->add_control(
+			'about_title',
+			[
+				'label' => __( 'Title', 'msiit-toolkit' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => 'Default title',
+			]
+		);
+
+		$this->add_control(
+			'about_title_color',
+			[
+				'label' => __( 'Title color', 'msiit-toolkit' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'scheme' => [
+					'type' => \Elementor\Scheme_Color::get_type(),
+					'value' => \Elementor\Scheme_Color::COLOR_1,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .title' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'about_content',
+			[
+				'label' => __( 'Sub Title', 'msiit-toolkit' ),
+				'type' => \Elementor\Controls_Manager::WYSIWYG,
+				'default' => 'content',
+			]
+		);
+
+		$this->add_control(
+			'about_btn',
+			[
+				'label' => __( 'Button text', 'msiit-toolkit' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => 'Read more',
+			]
+		);
+
+		$this->add_control(
+			'btn_link',
+			[
+				'label' => __( 'Button link', 'msiit-toolkit' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+			]
+		);
+
+		$this->end_controls_section();
+
+	}
+
+	protected function render() {
+
+		$settings = $this->get_settings_for_display();
+
+		$html = '
+		<div class="about-us-section wow fadeInUp" data-wow-duration="2s">
+				<div class="row no-gutters justify-content-center">
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="about-section-img">';
+							if (!empty($settings['about_img'])) {
+								$html .= '
+								<img src="'.wp_get_attachment_image_url( $settings['about_img']['id'], 'full' ).'" alt="'.$settings['about_title'].'" title="'.$settings['about_title'].'">';
+							}
+							$html .= '
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="about-section-content">';
+
+							if (!empty($settings['about_sub_title'])) {
+								$html .= '<h4>'.esc_html( $settings['about_sub_title'] ).'</h4>';
+							}
+
+							if (!empty($settings['about_title'])) {
+								$html .= '
+								<h3 style="color:'.esc_attr( $settings['about_title_color'] ).'">
+									'.esc_html( $settings['about_title'] ).'
+								</h3>';
+							}
+
+							if (!empty($settings['about_content'])) {
+								$html .= ''.wpautop( do_shortcode( $settings['about_content'] ) ).'';
+							}
+
+							if (!empty($settings['btn_link'])) {
+								$html .= '
+								<a href="'.esc_url( $settings['btn_link'] ).'" class="readmore-btn">
+									'.esc_html( $settings['about_btn'] ).'
+								</a>';
+							}
+							$html .= '
+						</div>
+					</div>
+				</div>	
 		</div>';
 
 		echo $html;
@@ -1757,11 +1941,11 @@ if (class_exists('WooCommerce')) {
 			) );
 
 			if($settings['columns'] == '4') {
-                $columns_markup = 'col-lg-3';
+                $columns_markup = 'col-lg-3 col-md-6';
             } else if($settings['columns'] == '3') {
-                $columns_markup = 'col-lg-4';
+                $columns_markup = 'col-lg-4 col-md-6';
             } else if($settings['columns'] == '2') {
-                $columns_markup = 'col-lg-6';
+                $columns_markup = 'col-lg-6 col-md-6';
             } else {
                 $columns_markup = 'col';
             }
@@ -1774,11 +1958,11 @@ if (class_exists('WooCommerce')) {
 				global $product;
 
 				$html .= '
-				<div class="'.$columns_markup.' single-sc-product">
-					<h4>'.get_the_title().'</h4>
+				<div class="'.$columns_markup.' single-sc-product text-center">
 					<a href="'.get_permalink().'" class="product-sc">
 						<img class="product-sc-thumb" src="'.get_the_post_thumbnail_url( get_the_ID(), 'full' ).'" alt="'.get_the_title().'" title="'.get_the_title().'">
 					</a>
+					<h4>'.get_the_title().'</h4>
 				</div>';
 				
 			endwhile; wp_reset_query();
@@ -1793,6 +1977,133 @@ if (class_exists('WooCommerce')) {
 
 			echo $html;
 		}
+	}
+
+
+	// Categories Widget
+	class Msiit_Categories_Widget extends \Elementor\Widget_Base {
+		public function get_name() {
+			return 'msiit-categories';
+		}
+
+		public function get_title() {
+			return 'Msiit Categories';
+		}
+		
+		public function get_icon() {
+			return 'fa fa-code';
+		}
+
+		public function get_categories() {
+			return 'general';
+		}
+
+		protected function _register_controls() {
+
+			$this->start_controls_section(
+                'content_section',
+                [
+                    'label' => __( 'Configuration', 'Msiit-toolkit' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                ]
+            );
+
+
+            $this->add_control(
+                'pcat_ids',
+                [
+                    'label' => __( 'Select Categories', 'Msiit-toolkit' ),
+                    'type' => \Elementor\Controls_Manager::SELECT2,
+                    'multiple' => true,
+                    'options' => msiit_product_cat_list(),
+                    'label_block' => true,
+                ]
+            );
+
+            $this->add_control(
+                'columns',
+                [
+                    'label' => __( 'Columns', 'Msiit-toolkit' ),
+                    'type' => \Elementor\Controls_Manager::SELECT,
+                    'default' => '4',
+                    'options' => [
+                        '4'  => __( '4 Columns', 'Msiit-toolkit' ),
+                        '3'  => __( '3 Columns', 'Msiit-toolkit' ),
+                        '2'  => __( '2 Columns', 'Msiit-toolkit' ),
+                        '1'  => __( '1 Columns', 'Msiit-toolkit' ),
+                    ],
+                ]
+            );
+
+            $this->add_control(
+                'bg',
+                [
+                    'label' => __( 'Image as background?', 'Msiit-toolkit' ),
+                    'type' => \Elementor\Controls_Manager::SWITCHER,
+                    'default' => 'no'
+                ]
+            );
+
+            $this->end_controls_section();
+
+		}
+
+		protected function render() {
+
+            $settings = $this->get_settings_for_display();
+
+            if($settings['columns'] == '4') {
+                $columns_markup = 'col-lg-3 col-md-6';
+            } else if($settings['columns'] == '3') {
+                $columns_markup = 'col-lg-4 col-md-6';
+            } else if($settings['columns'] == '2') {
+                $columns_markup = 'col-lg-6 col-md-6';
+            } else {
+                $columns_markup = 'col';
+            }
+
+            if(!empty($settings['pcat_ids'])) {
+                $html = '<div class="row">';
+                foreach($settings['pcat_ids'] as $cat) {
+                    $thumb_id = get_woocommerce_term_meta( $cat, 'thumbnail_id', true );
+                    $term_img = wp_get_attachment_image_url(  $thumb_id, 'full' );
+                    $info = get_term($cat, 'product_cat');
+
+                    $html .= '<div class="'.$columns_markup.' single-category-item text-center wow fadeInUp" data-wow-duration="2s"">';
+
+                        if(!empty($thumb_id)) {
+                            if($settings['bg'] == 'yes') {
+                                $html .= '<a href="'.esc_url( get_term_link($info->term_id) ).'" class="cat-img cat-img-bg" style="background-image:url('.esc_url( $term_img ).')"></a>';
+                            } else {
+                                $html .='
+                                <div class="row cat-img">
+                                    <div class="col text-center">
+                                        <div class="cat-img-content">
+											<img src="'.esc_url( $term_img ).'" alt="'.esc_attr( $info->name ).'"/>
+
+	                                        <h3>'.esc_html( $info->name ).'</h3>
+						                    '.wpautop( esc_html( $info->description ) ).'
+						                    <a href="'.esc_url( get_term_link($info->term_id) ).'" class="readmore-btn">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>';
+                            }
+                            
+                        } else {
+                            $html .= '<a  href="'.esc_url( get_term_link($info->term_id) ).'" class="cat-no-thumb"><p>No thumbnail</p></a>';
+                        }
+                        
+                        $html .='</div>';
+                }
+                $html .= '</div>';
+            } else {
+                $html = '<div class="alert alert-warning"><p>Please select categories.</p></div>';
+            }
+
+            echo $html;
+
+        }
+
 	}
 
 }

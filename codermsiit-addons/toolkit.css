@@ -1,0 +1,426 @@
+/*Color CSS*/
+.single-slider-item a {
+    color: #fff !important;
+}
+
+.boxed-btn,
+.slides.slick-slider i.slick-arrow {
+    color: #fff;
+}
+
+.slide-content .slide-title, .service-box.standered i.fa, .readmore-btn.service-btn i.fa, .standered .service-title {
+    color: #592D84;
+}
+
+.slides .slick-dots li button{
+    background: #fff;
+}
+
+.single-slider-item {
+    background-color: #ddd;
+}
+
+
+.slide-content {
+    background: rgba(255,255,255,0.7);
+}
+
+.slides.slick-slider i.slick-arrow {
+    background: rgba(0,0,0,0.5);
+}
+
+.boxed-btn:hover {
+    background: rgba(96,60,138,.5);
+}
+
+.boxed-btn {
+    border: 2px solid #603C8A;
+    background: #603C8A;
+}
+
+.boxed-btn:hover {
+    border: 2px solid transparent;
+}
+
+.standered .readmore-btn.service-btn i.fa, .service-box i.fa {
+    color: grey;
+}
+
+.service-box.standered .service-box-inner {
+    border-color: #592D84;
+}
+
+.service-box.standered .readmore-btn.service-btn {
+    border-color: grey;
+    color: grey;
+}
+
+.readmore-btn.service-btn {
+    border: 6px solid #592D84;
+}
+
+.service-box-inner {
+    border: 30px solid grey;
+}
+
+
+
+
+/*Slider CSS*/
+.single-slider-item {
+    background-size: cover;
+    background-position: center center;
+    height: 550px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+    background-repeat: no-repeat;
+}
+
+.slide-content {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.slick-slide .slide-content-box {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+.slick-slide.slick-current.slick-active .slide-content-box {
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	position: relative;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	perspective: perspective;
+	transform-style: preserve-3d;
+	-webkit-transition: all 1s ease-in-out 0.3s;
+    transition: all 1s ease-in-out 0.3s;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide-content-box {
+    padding: 20px 60px;
+    position: relative;
+}
+
+.slider-icon img {
+    width: 64px;
+}
+
+.slider-icon {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: -10px;
+}
+
+.slide-content p {
+    margin-bottom: 0;
+}
+
+.slide-content .slide-title {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 40px 0 35px;
+}
+
+/*Button CSS*/
+.boxed-btn {
+    display: inline-block;
+    padding: .3em 1em;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    position: relative;
+    text-transform: capitalize;
+    transition: all .2s;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.boxed-btn:after {
+    position: absolute;
+    content: "\f105";
+    font-family: fontawesome;
+    margin-left: -16px;
+    font-size: 25px;
+    transition: all 300ms ease 0ms;
+    opacity: 0;
+}
+
+.boxed-btn:hover:after {
+    opacity: 1;
+    margin-left: 0;
+    right: 15px;
+}
+
+.boxed-btn:hover {
+    padding: .3em 2em .3em .7em;
+}
+
+
+.slides.slick-slider i.slick-arrow {
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    margin-top: -25px;
+    left: 50px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s ease;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.slides.slick-slider i.fa-angle-right.slick-arrow {
+    left: auto;
+    right: 50px;
+}
+
+.slides.slick-slider:hover i.slick-arrow {
+	opacity: 1;
+	visibility: visible;
+}
+
+.slides .slick-dots {
+    bottom: 100px;
+    z-index: 2;
+}
+
+.slides .slick-dots li button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    opacity: .3;
+}
+
+.slides .slick-dots li button:before {
+    display: none;
+}
+
+.slides .slick-dots li {
+    width: 10px;
+    height: 10px;
+}
+
+.slides .slick-dots li.slick-active button {
+    opacity: 1;
+}
+
+.slides.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+
+/*Services CSS*/
+.service-box-inner {
+    padding: 30px 10px;
+    position: relative;
+}
+
+.service-title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.service-sub-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.readmore-btn.service-btn {
+    border-radius: 15px;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -42px;
+    display: inline-block;
+    /* width: 180px; */
+    height: 55px;
+    line-height: 45px;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.service-box i.fa {
+    font-size: 60px;
+    line-height: 10px;
+}
+
+.readmore-btn.service-btn i.fa {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    padding-left: 25px;
+}
+
+
+/*accordion CSS*/
+.mb-0 > a {
+    display: block;
+    position: relative;
+}
+.mb-0 > a:after {
+    content: "\f078"; /* fa-chevron-down */
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 25px;
+}
+.mb-0 > a[aria-expanded="true"]:after {
+    content: "\f077"; /* fa-chevron-up */
+    font-size: 25px;
+}
+
+.card .card-header a {
+    color: #fff !important;
+    font-size: 18px;
+}
+
+.card .card-header a .heading {
+    font-size: 25px;
+    color: #fff !important;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card .card-header a .heading.price {
+    transform: translateX(-40px);
+}
+
+.card .card-header p {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.card-body {
+    font-size: 18px;
+}
+
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.slide-content .slide-title {
+    font-size: 25px;
+}
+
+.slide-content h4.slide-title {
+    line-height: 22px;
+}
+
+.slide-content {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px !important;
+}
+
+.slide-content .slide-title {
+    line-height: 35px;
+}
+
+.boxed-btn {
+    padding: .2em .8em;
+    font-size: 16px;
+}
+
+.single-slider-item {
+    height: 300px;
+}
+
+.slides .slick-dots {
+    bottom: 20px;
+}
+
+
+}
+
+
+/* Mobile Layout: 320px. */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+.slide-content .slide-title {
+    font-size: 25px;
+}
+
+.slide-content h4.slide-title {
+    line-height: 22px;
+}
+
+.slide-content {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 14px !important;
+}
+.slide-content .slide-title {
+    line-height: 35px;
+}
+
+.boxed-btn {
+    padding: .2em .8em;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.single-slider-item {
+    height: inherit !important;
+}
+
+.slides .slick-dots {
+    bottom: 10px;
+}
+
+.slider-icon img {
+    width: 50px;
+}
+
+.slider-icon {
+    top: -4px;
+}
+
+.slide-content-box {
+    padding: 20px 30px;
+}
+
+.slides.slick-slider i.slick-arrow {
+    display: none !important;
+}
+
+.card .card-header a .heading.price {
+    transform: translateX(0);
+}
+
+.card .card-header a, .card-body {
+    font-size: 16px;
+}
+
+.card .card-header a .heading {
+    font-size: 20px;
+}
+
+
+}

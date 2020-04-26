@@ -1,3 +1,168 @@
+/*Color CSS*/
+.right-list ul li,
+.dealer-info-box a,
+.msiit-tabs nav a.nav-link {
+    color: #000;
+}
+
+ul.tab-titles li strong {
+    color:  #05457F !important;
+}
+
+.left-inner-title h3 {
+    color: #072E55 !important;
+}
+
+.single-slider-item, .single-slider-item a {
+    color: #fff !important;
+}
+
+
+.slide-content .slide-title,
+.download-btn .boxed-btn,
+.boxed-btn,
+.slides.slick-slider i.slick-arrow,
+.pricing-box.standered,
+ul.tab-titles li div {
+    color: #fff;
+}
+
+.section-title h1, 
+.section-title h2, 
+.section-title h3, 
+.section-title h4, 
+.section-title h5, 
+.section-title h6 {
+    color: #13100d;
+}
+
+.contentbox-content h3, 
+.contentbox-content a,
+.dealer-info-box .link a {
+    color: #ed1b24;
+}
+
+.p-list a {
+    color: #666 !important;
+}
+
+.pricing-box.standered h3, 
+.pricing-box.standered strong,
+.testimonial-carousel .slick-center .stars i {
+    color: #FFDF44;
+}
+
+.right-list ul li {
+    background: #ffe512;
+}
+
+.tab-wrap.newtest-slider {
+    background: #F1F2F8;
+}
+
+ul.tab-titles li div {
+    background: #05457F !important;
+}
+
+ul.tab-titles li,
+ul.tab-titles:after {
+    background: #ccc;
+}
+
+ul.tab-titles li a:after,
+.slides .slick-dots li button,
+.msiit-tabs .tab-content,
+.testimonial-top-content,
+.single-content-box {
+    background: #fff;
+}
+
+.right-image,
+.single-slider-item,
+.section-blog-img,
+.product-sc-thumb {
+    background-color: #ddd;
+}
+
+
+.slide-content {
+    background: rgba(0,0,0,.5);
+}
+
+.download-btn .boxed-btn,
+.download-btn .boxed-btn:hover {
+    background: #666;
+}
+
+.boxed-btn:hover {
+    background: rgba(255,255,255,.2);
+}
+
+.msiit-tabs nav {
+    background: #F4F4F4;
+}
+
+.testimonials-area {
+    background: #F0F0F0;
+}
+
+.pricing-box {
+    background: #F8F8F8;
+}
+
+.pricing-box.standered {
+    background: #333;
+}
+
+.testimonials-area {
+    background: #F0F0F0;
+}
+
+.testimonial-carousel .slick-dots li button {
+    background: #000;
+}
+
+ul.tab-titles li a:after {
+    border: 7px solid rgb(19, 181, 234);
+}
+
+.download-btn .boxed-btn:hover {
+    border: 2px solid transparent;
+}
+
+.boxed-btn {
+    border: 2px solid #fff;
+}
+
+.boxed-btn:hover {
+    border: 2px solid transparent;
+}
+
+.readmore-btn {
+    border: 2px solid #ccc;
+}
+
+.msiit-tabs {
+    border: 1px solid #ddd;
+}
+
+.pricing-box-inner h3:after {
+    border-bottom: 5px dotted #ccc;
+}
+
+.dealer-info-box {
+    border-bottom: 1px solid #ed1b24;
+}
+
+.testimonial-top-content {
+    box-shadow: 0 5px 10px #ccc;
+}
+
+.single-content-box:hover {
+    box-shadow: -5px 30px 46px -22px #aaaaaa;
+}
+
+
 /*Tab slider*/
 .tab-wrap.newtest-slider .container-fluid {
     padding-left: 0;
@@ -5,9 +170,7 @@
 }
 .right-list ul li {
     margin: 5px 0;
-    background: #ffe512;
     display: inline-block;
-    color: #000;
     font-weight: 700;
     padding: 10px 15px 10px 30px;
     border-radius: 5px;
@@ -28,9 +191,6 @@
     font-family: fontawesome;
 }
 
-.tab-wrap.newtest-slider {
-    background: #F1F2F8;
-}
 .slider-tab-content{
     display: none;
 }
@@ -38,9 +198,7 @@ ul.tab-titles li div {
     bottom: -175px;
     left: 0;
     right: 0;
-    background: #05457F !important;
     border-radius: 5px;
-    color: #fff;
     display: block;
     padding: 10px;
 }
@@ -50,7 +208,6 @@ ul.tab-titles li strong {
     right: 0;
     top: -140px;
     font-size: 20px;
-    color:  #05457F !important;
 }
 
 ul.tab-titles li strong, ul.tab-titles li div {
@@ -70,7 +227,6 @@ ul.tab-titles li {
     display: inline-block;
     margin: auto 6px;
     height: 20px;
-    background: #ccc;
     padding: 1px;
     z-index: 1;
     margin-top: -5px !important;
@@ -90,7 +246,6 @@ ul.tab-titles:after {
     left: 0;
     width: 100%;
     top: 6px;
-    background: #ccc;
     content: "";
     height: 2px;
     display: block;
@@ -103,12 +258,10 @@ ul.tab-titles li a:after {
     top: -5px;
     width: 25px;
     height: 25px;
-    border: 7px solid rgb(19, 181, 234);
     border-radius: 50%;
     opacity: 0;
     visibility: hidden;
     z-index: 5;
-    background: #fff;
 }
 
 .letf-inner-slide {
@@ -120,10 +273,8 @@ ul.tab-titles li a:after {
     background-size: cover;
     background-position: center;
     height: 660px;
-    background-color: #ddd;
 }
 .left-inner-title h3 {
-    color: #072E55 !important;
     font-weight: 800;
 }
 
@@ -259,25 +410,26 @@ ul.tab-titles li div {
 
 /*Slider CSS*/
 .single-slider-item {
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    height: 600px;
+    background-position: center center;
+    min-height: 100%;
+	height: 525px;
     display: flex !important;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 1;
-    background-color: #ddd;
+    background-repeat: no-repeat;
 }
 
-.single-slider-item, .single-slider-item a {
-    color: #fff !important;
-}
 
 .slide-content {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    background: rgba(0,0,0,.5);
     padding: 25px;
     margin-bottom: 30px;
     border-radius: 5px;
@@ -313,7 +465,6 @@ ul.tab-titles li div {
 }
 
 .slide-content .slide-title {
-    color: #fff;
     font-size: 42px;
     line-height: 55px;
     font-weight: 300;
@@ -321,19 +472,8 @@ ul.tab-titles li div {
 }
 
 /*Button CSS*/
-.download-btn .boxed-btn {
-    background: #666;
-    color: #fff;
-}
-
-.download-btn .boxed-btn:hover {
-    background: #666;
-    border: 2px solid transparent;
-}
-
 .boxed-btn {
     display: inline-block;
-    border: 2px solid #fff;
     padding: .3em 1em;
     border-radius: 5px;
     font-size: 20px;
@@ -341,7 +481,6 @@ ul.tab-titles li div {
     line-height: 34px;
     position: relative;
     text-transform: capitalize;
-    color: #fff;
     transition: all .2s;
 }
 
@@ -363,14 +502,11 @@ ul.tab-titles li div {
 
 .boxed-btn:hover {
     padding: .3em 2em .3em .7em;
-    border: 2px solid transparent;
-    background: rgba(255,255,255,.2);
 }
 
 
 .slides.slick-slider i.slick-arrow {
     position: absolute;
-    color: #fff;
     font-size: 40px;
     top: 50%;
     margin-top: -25px;
@@ -398,7 +534,6 @@ ul.tab-titles li div {
 }
 
 .slides .slick-dots li button {
-    background: #fff;
     width: 10px !important;
     height: 10px !important;
     border-radius: 50%;
@@ -421,7 +556,6 @@ ul.tab-titles li div {
 /*Section Title CSS*/
 .section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
     margin-bottom: 10px;
-    color: #13100d;
 }
 .section-title h1 {
     font-size: 35px;
@@ -448,15 +582,22 @@ ul.tab-titles li div {
 }
 
 /*Content Box CSS*/
+
+.single-content-box {
+    padding: 20px;
+}
+
 .contentbox-content h3 {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 22px;
+    line-height: 25px;
     margin-top: 25px;
 }
 
-.contentbox-content h3, .contentbox-content a {
-    color: #ed1b24;
-    font-weight: 500;
+.readmore-btn {
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 600;
 }
 
 /*Dealer info CSS*/
@@ -468,39 +609,23 @@ ul.tab-titles li div {
     padding: 10px 0;
 }
 
-.dealer-info-box .link a {
-    color: #ed1b24;
-}
-
-.dealer-info-box a {
-    color: #000;
-}
-
 .dealer-info-box {
     padding-bottom: 20px;
-    border-bottom: 1px solid #ed1b24;
 }
 
 
 /*Tabs CSS*/
-.msiit-tabs {
-    border: 1px solid #ddd;
-}
-
 .msiit-tabs nav {
-    background: #F4F4F4;
     border-radius: 0;
 }
 
 .msiit-tabs nav a.nav-link {
-    color: #000;
     font-weight: 600;
     border-radius: 0;
 }
 
 .msiit-tabs .tab-content {
     padding: 20px;
-    background: #fff;
 }
 
 .msiit-tabs .tab-content p {
@@ -512,7 +637,6 @@ ul.tab-titles li div {
     height: 230px;
     background-size: cover;
     background-position: center;
-    background-color: #ddd;
 }
 
 .section-blog-content .entry-title {
@@ -529,18 +653,6 @@ ul.tab-titles li div {
     margin: 0 2px !important;
 }
 
-
-/*WooCommerce CSS*/
-.product-sc-thumb {
-    background-size: cover;
-    background-color: #ddd;
-    height: 390px;
-    background-position: center;
-}
-
-.single-sc-product {
-    margin-bottom: 40px;
-}
 
 /*Download Box CSS*/
 .download-box strong {
@@ -561,13 +673,9 @@ ul.tab-titles li div {
     line-height: 2;
 }
 
-.p-list a {
-    color: #666 !important;
-}
 
 /*Testimonial CSS*/
 .testimonials-area {
-    background: #F0F0F0;
     position: relative;
     padding-bottom: 100px;
 }
@@ -577,10 +685,8 @@ ul.tab-titles li div {
 }
 
 .testimonial-top-content {
-    background: #fff;
     margin: 0 10px;
     border-radius: 10px;
-    box-shadow: 0 5px 10px #ccc;
     padding: 50px 30px 0;
 }
 
@@ -629,10 +735,6 @@ ul.tab-titles li div {
 
 .testimonial-carousel .slick-center {
     opacity: 1;
-}
-
-.testimonial-carousel .slick-center .stars i {
-    color: #FFDF44;
 }
 
 
@@ -659,7 +761,6 @@ ul.tab-titles li div {
     display: inline-block;
     text-align: center;
     margin: 0 8px;
-    background: #F8F8F8;
     border-radius: 10px;
 }
 
@@ -673,7 +774,6 @@ ul.tab-titles li div {
 .pricing-box-inner h3:after {
     position: absolute;
     content: "";
-    border-bottom: 5px dotted #ccc;
     height: 3px;
     width: 80px;
     bottom: -20px;
@@ -699,15 +799,6 @@ ul.tab-titles li div {
     padding: 60px 0;
 }
 
-.pricing-box.standered {
-    background: #333;
-    color: #fff;
-}
-
-.pricing-box.standered h3, .pricing-box.standered strong {
-    color: #FFDF44;
-}
-
 .pricing-area .section-title {
     margin-bottom: 60px;
 }
@@ -716,7 +807,6 @@ ul.tab-titles li div {
 /*Testimonial CSS*/
 
 .testimonials-area {
-    background: #F0F0F0;
     position: relative;
     padding: 80px 0;
 }
@@ -726,10 +816,8 @@ ul.tab-titles li div {
 }
 
 .testimonial-top-content {
-    background: #fff;
     margin: 0 10px;
     border-radius: 10px;
-    box-shadow: 0 5px 10px #ccc;
     padding: 50px 30px 0;
 }
 
@@ -780,9 +868,6 @@ ul.tab-titles li div {
     opacity: 1;
 }
 
-.testimonial-carousel .slick-center .stars i {
-    color: #FFDF44;
-}
 
 .testimonial-top-content img {
     border-radius: 50% !important;
@@ -793,7 +878,6 @@ ul.tab-titles li div {
     width: 6px;
     height: 6px;
     padding: 0;
-    background: #000;
     border-radius: 50%;
 }
 
@@ -807,4 +891,85 @@ ul.tab-titles li div {
     margin: 0 2px;
     line-height: 0px;
 }
+
+/*About Section CSS*/
+.about-section-content {
+    padding: 0 60px;
+}
+
+.about-us-section .row {
+    display: flex;
+    align-items: center;
+}
+
+.about-section-content h4 {
+    margin-bottom: 5px;
+}
+
+.about-section-img img {
+    min-width: 100%;
+}
+
+
+/*======= WooCommerce CSS ========*/
+/*Categories widget CSS*/
+.single-category-item {
+    margin-top: 30px;
+}
+
+.cat-img-content {
+    border: 1px solid #ccc;
+    padding: 25px 20px 30px;
+    transition: all .3s ease;
+}
+
+.cat-img-content:hover {
+    box-shadow: 0 0 19px rgba(0,0,0,0.5);
+    border: none;
+}
+
+.cat-img-content img {
+    margin-bottom: 20px;
+    height: 200px !important;
+}
+
+.cat-img-content h3 {
+    font-weight: 700;
+}
+
+.cat-img-content .readmore-btn {
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.cat-no-thumb {
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.cat-no-thumb p {
+    opacity: .2;
+}
+
+/*specific categories widget css*/
+.product-sc-thumb {
+    background-size: cover;
+    height: 390px;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.single-sc-product {
+    margin-bottom: 40px;
+}
+
 
