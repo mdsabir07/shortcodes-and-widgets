@@ -10,7 +10,7 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'CoderMSIit Slider', 'msiit-toolkit' );
+		return __( 'CoderMSIit Slider', 'codermsiit' );
 	}
 
 	public function get_icon() {
@@ -26,7 +26,7 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Slides', 'msiit-toolkit' ),
+				'label' => __( 'Slides', 'codermsiit' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -35,32 +35,32 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 
 		$repeater->add_control(
 			'icon1', [
-				'label' => __( 'Icon 1', 'msiit-toolkit' ),
+				'label' => __( 'Icon 1', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 			]
 		);
 
 		$repeater->add_control(
 			'icon2', [
-				'label' => __( 'Icon 2', 'msiit-toolkit' ),
+				'label' => __( 'Icon 2', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 			]
 		);
 
 		$repeater->add_control(
 			'title1', [
-				'label' => __( 'Title 1', 'msiit-toolkit' ),
+				'label' => __( 'Title 1', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Slide Title 1' , 'msiit-toolkit' ),
+				'default' => __( 'Slide Title 1' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'title2', [
-				'label' => __( 'Title 2', 'msiit-toolkit' ),
+				'label' => __( 'Title 2', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Slide Title 2' , 'msiit-toolkit' ),
+				'default' => __( 'Slide Title 2' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
@@ -68,16 +68,16 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'heading1',
 			[
-				'label' => __( 'Select heading tag 1', 'msiit-toolkit' ),
+				'label' => __( 'Select heading tag 1', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => '4',
                 'options' => [
-                    '1'  => __( 'h1', 'msiit-toolkit' ),
-                    '2'  => __( 'h2', 'msiit-toolkit' ),
-                    '3'  => __( 'h3', 'msiit-toolkit' ),
-                    '4'  => __( 'h4', 'msiit-toolkit' ),
-                    '5'  => __( 'h5', 'msiit-toolkit' ),
-                    '6'  => __( 'h6', 'msiit-toolkit' ),
+                    '1'  => __( 'h1', 'codermsiit' ),
+                    '2'  => __( 'h2', 'codermsiit' ),
+                    '3'  => __( 'h3', 'codermsiit' ),
+                    '4'  => __( 'h4', 'codermsiit' ),
+                    '5'  => __( 'h5', 'codermsiit' ),
+                    '6'  => __( 'h6', 'codermsiit' ),
                 ],
 			]
 		);
@@ -85,85 +85,85 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'heading2',
 			[
-				'label' => __( 'Select heading tag 2', 'msiit-toolkit' ),
+				'label' => __( 'Select heading tag 2', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => '4',
                 'options' => [
-                    '1'  => __( 'h1', 'msiit-toolkit' ),
-                    '2'  => __( 'h2', 'msiit-toolkit' ),
-                    '3'  => __( 'h3', 'msiit-toolkit' ),
-                    '4'  => __( 'h4', 'msiit-toolkit' ),
-                    '5'  => __( 'h5', 'msiit-toolkit' ),
-                    '6'  => __( 'h6', 'msiit-toolkit' ),
+                    '1'  => __( 'h1', 'codermsiit' ),
+                    '2'  => __( 'h2', 'codermsiit' ),
+                    '3'  => __( 'h3', 'codermsiit' ),
+                    '4'  => __( 'h4', 'codermsiit' ),
+                    '5'  => __( 'h5', 'codermsiit' ),
+                    '6'  => __( 'h6', 'codermsiit' ),
                 ],
 			]
 		);
 
 		$repeater->add_control(
 			'content1', [
-				'label' => __( 'Content 1', 'msiit-toolkit' ),
+				'label' => __( 'Content 1', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => __( 'Slide Content 1' , 'msiit-toolkit' ),
+				'default' => __( 'Slide Content 1' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 		$repeater->add_control(
 			'content2', [
-				'label' => __( 'Content 2', 'msiit-toolkit' ),
+				'label' => __( 'Content 2', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => __( 'Slide Content 2' , 'msiit-toolkit' ),
+				'default' => __( 'Slide Content 2' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'font_size', [
-				'label' => __( 'Content font size', 'msiit-toolkit' ),
+				'label' => __( 'Content font size', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( '18' , 'msiit-toolkit' ),
+				'default' => __( '18' , 'codermsiit' ),
 			]
 		);
 
 		$repeater->add_control(
 			'slide_btn_text1', [
-				'label' => __( 'Button text 1', 'msiit-toolkit' ),
+				'label' => __( 'Button text 1', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Learn more' , 'msiit-toolkit' ),
+				'default' => __( 'Learn more' , 'codermsiit' ),
 			]
 		);
 
 		$repeater->add_control(
 			'slide_btn_text2', [
-				'label' => __( 'Button text 2', 'msiit-toolkit' ),
+				'label' => __( 'Button text 2', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Learn more' , 'msiit-toolkit' ),
+				'default' => __( 'Learn more' , 'codermsiit' ),
 			]
 		);
 
 		$repeater->add_control(
 			'slide_link1', [
-				'label' => __( 'Button link 1', 'msiit-toolkit' ),
+				'label' => __( 'Button link 1', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
 
 		$repeater->add_control(
 			'slide_link2', [
-				'label' => __( 'Button link 2', 'msiit-toolkit' ),
+				'label' => __( 'Button link 2', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
 
 		$repeater->add_control(
 			'slide_bg', [
-				'label' => __( 'Slide background', 'msiit-toolkit' ),
+				'label' => __( 'Slide background', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 			]
 		);
 
 		$repeater->add_control(
 			'slide_height', [
-				'label' => __( 'Slide height (exm: 300)', 'msiit-toolkit' ),
+				'label' => __( 'Slide height (exm: 300)', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
@@ -171,13 +171,13 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'slides',
 			[
-				'label' => __( 'Slides', 'msiit-toolkit' ),
+				'label' => __( 'Slides', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'title' => __( 'Title #1', 'msiit-toolkit' ),
-						'slide_btn_text' => __( 'Read more' , 'msiit-toolkit' ),
+						'title' => __( 'Title #1', 'codermsiit' ),
+						'slide_btn_text' => __( 'Read more' , 'codermsiit' ),
 					],
 				],
 				'title_field' => '{{{ title }}}',
@@ -188,7 +188,7 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'setting_section',
 			[
-				'label' => __( 'Slider Settings', 'msiit-toolkit' ),
+				'label' => __( 'Slider Settings', 'codermsiit' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -196,10 +196,10 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'fade',
 			[
-				'label' => __( 'Fade effect?', 'msiit-toolkit' ),
+				'label' => __( 'Fade effect?', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'msiit-toolkit' ),
-				'label_off' => __( 'No', 'msiit-toolkit' ),
+				'label_on' => __( 'Yes', 'codermsiit' ),
+				'label_off' => __( 'No', 'codermsiit' ),
 				'return_value' => 'yes',
 				'default' => 'no',
 			]
@@ -208,10 +208,10 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop?', 'msiit-toolkit' ),
+				'label' => __( 'Loop?', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'msiit-toolkit' ),
-				'label_off' => __( 'No', 'msiit-toolkit' ),
+				'label_on' => __( 'Yes', 'codermsiit' ),
+				'label_off' => __( 'No', 'codermsiit' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -220,10 +220,10 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Show arrows?', 'msiit-toolkit' ),
+				'label' => __( 'Show arrows?', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'msiit-toolkit' ),
-				'label_off' => __( 'No', 'msiit-toolkit' ),
+				'label_on' => __( 'Yes', 'codermsiit' ),
+				'label_off' => __( 'No', 'codermsiit' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -232,10 +232,10 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Show dots?', 'msiit-toolkit' ),
+				'label' => __( 'Show dots?', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'msiit-toolkit' ),
-				'label_off' => __( 'No', 'msiit-toolkit' ),
+				'label_on' => __( 'Yes', 'codermsiit' ),
+				'label_off' => __( 'No', 'codermsiit' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -244,10 +244,10 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay?', 'msiit-toolkit' ),
+				'label' => __( 'Autoplay?', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'msiit-toolkit' ),
-				'label_off' => __( 'No', 'msiit-toolkit' ),
+				'label_on' => __( 'Yes', 'codermsiit' ),
+				'label_off' => __( 'No', 'codermsiit' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -256,7 +256,7 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'autoplay_time',
 			[
-				'label' => __( 'Autoplay time', 'msiit-toolkit' ),
+				'label' => __( 'Autoplay time', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => '3000',
 			]
@@ -265,7 +265,7 @@ class Msiit_Slider_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'speed',
 			[
-				'label' => __( 'Sliding speed', 'msiit-toolkit' ),
+				'label' => __( 'Sliding speed', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => '3000',
 			]
@@ -405,7 +405,7 @@ class Msiit_Services_Widget extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'CoderMSIit Services', 'msiit-toolkit' );
+		return __( 'CoderMSIit Services', 'codermsiit' );
 	}
 
 	public function get_icon() {
@@ -421,7 +421,7 @@ class Msiit_Services_Widget extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Services', 'msiit-toolkit' ),
+				'label' => __( 'Services', 'codermsiit' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -430,60 +430,60 @@ class Msiit_Services_Widget extends \Elementor\Widget_Base {
 
 		$repeater->add_control(
 			'title', [
-				'label' => __( 'Title', 'msiit-toolkit' ),
+				'label' => __( 'Title', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Service Title' , 'msiit-toolkit' ),
+				'default' => __( 'Service Title' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'subtitle', [
-				'label' => __( 'Sub Title', 'msiit-toolkit' ),
+				'label' => __( 'Sub Title', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Service sub Title' , 'msiit-toolkit' ),
+				'default' => __( 'Service sub Title' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'content', [
-				'label' => __( 'Content', 'msiit-toolkit' ),
+				'label' => __( 'Content', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => __( 'Content' , 'msiit-toolkit' ),
+				'default' => __( 'Content' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'font_size', [
-				'label' => __( 'Content font size', 'msiit-toolkit' ),
+				'label' => __( 'Content font size', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( '18' , 'msiit-toolkit' ),
+				'default' => __( '18' , 'codermsiit' ),
 			]
 		);
 
 		$repeater->add_control(
 			'btn_text', [
-				'label' => __( 'Button text', 'msiit-toolkit' ),
+				'label' => __( 'Button text', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
 
 		$repeater->add_control(
 			'btn_link', [
-				'label' => __( 'Button link', 'msiit-toolkit' ),
+				'label' => __( 'Button link', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
 
 		$repeater->add_control(
 			'box_class', [
-				'label' => __( 'Select Box Style', 'msiit-toolkit' ),
+				'label' => __( 'Select Box Style', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'options'	=> [
-                	'simple'	=> __('Simple', 'msiit-toolkit'),
-                	'standered'	=> __('Standered', 'msiit-toolkit'),
+                	'simple'	=> __('Simple', 'codermsiit'),
+                	'standered'	=> __('Standered', 'codermsiit'),
                 ],
 			]
 		);
@@ -491,7 +491,7 @@ class Msiit_Services_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'services',
 			[
-				'label' => __( 'Services', 'msiit-toolkit' ),
+				'label' => __( 'Services', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 			]
@@ -550,7 +550,7 @@ class Msiit_Accordion_Widget extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'CoderMSIit Accordion', 'msiit-toolkit' );
+		return __( 'CoderMSIit Accordion', 'codermsiit' );
 	}
 
 	public function get_icon() {
@@ -566,7 +566,7 @@ class Msiit_Accordion_Widget extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Accordion', 'msiit-toolkit' ),
+				'label' => __( 'Accordion', 'codermsiit' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -575,27 +575,27 @@ class Msiit_Accordion_Widget extends \Elementor\Widget_Base {
 
 		$repeater->add_control(
 			'title', [
-				'label' => __( 'Title', 'msiit-toolkit' ),
+				'label' => __( 'Title', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Accordion Title' , 'msiit-toolkit' ),
+				'default' => __( 'Accordion Title' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'price', [
-				'label' => __( 'Price', 'msiit-toolkit' ),
+				'label' => __( 'Price', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Accordion Price' , 'msiit-toolkit' ),
+				'default' => __( 'Accordion Price' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'heading_text', [
-				'label' => __( 'Header text', 'msiit-toolkit' ),
+				'label' => __( 'Header text', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => __( 'Header text' , 'msiit-toolkit' ),
+				'default' => __( 'Header text' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
@@ -604,7 +604,7 @@ class Msiit_Accordion_Widget extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'header_color',
 			[
-				'label' => __( 'Select header background color', 'msiit-toolkit' ),
+				'label' => __( 'Select header background color', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => \Elementor\Scheme_Color::get_type(),
@@ -618,23 +618,23 @@ class Msiit_Accordion_Widget extends \Elementor\Widget_Base {
 
 		$repeater->add_control(
 			'content', [
-				'label' => __( 'Body content', 'msiit-toolkit' ),
+				'label' => __( 'Body content', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::WYSIWYG,
-				'default' => __( 'Body content' , 'msiit-toolkit' ),
+				'default' => __( 'Body content' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'btn_text', [
-				'label' => __( 'Button text', 'msiit-toolkit' ),
+				'label' => __( 'Button text', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
 
 		$repeater->add_control(
 			'btn_link', [
-				'label' => __( 'Button link', 'msiit-toolkit' ),
+				'label' => __( 'Button link', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
@@ -643,7 +643,7 @@ class Msiit_Accordion_Widget extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'body_color',
 			[
-				'label' => __( 'Select body background color', 'msiit-toolkit' ),
+				'label' => __( 'Select body background color', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => \Elementor\Scheme_Color::get_type(),
@@ -658,7 +658,7 @@ class Msiit_Accordion_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'accordions',
 			[
-				'label' => __( 'Accordion', 'msiit-toolkit' ),
+				'label' => __( 'Accordion', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 			]

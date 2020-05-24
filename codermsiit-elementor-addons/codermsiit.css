@@ -1,0 +1,178 @@
+/*Pricing CSS*/
+.pricing-area {
+    text-align: center;
+}
+
+.pricing-box {
+    width: 31%;
+    display: inline-block;
+    margin: 0 8px;
+    border-radius: 6px;
+    background: #fff;
+    padding: 25px 0 0;
+    box-shadow: 5px 0 20px 3px #ddd;
+}
+
+.pricing-box-inner .price-title {
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 0;
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 2;
+    transition: all .5s ease;
+}
+
+.price-text {
+    background: #ccc;
+    line-height: 2.5;
+    margin-top: 20px;
+}
+
+
+.pricing-box-inner strong {
+    font-size: 35px;
+}
+
+.pricing-box ul {
+    margin: 0 !important;
+    list-style: none;
+    background: #F6F6F6;
+}
+
+.pricing-box ul li {
+    border-top: 1px solid #bbb;
+    line-height: 3;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.pricing-box ul li:last-child {
+    border-bottom: 1px solid #bbb;
+}
+
+.pricing-button {
+    background: #ccc;
+    line-height: 5;
+    border-radius: 0 0 6px 6px;
+    transition: all .5s ease;
+}
+
+.pricing-button .btn {
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+.pricing-button .btn:hover {
+    background: #9632DC;
+}
+
+.pricing-box.standered .price-text {
+    background: #9632DC;
+    color: #fff;
+}
+
+.pricing-box.standered .pricing-box-inner ul {background: #f9f9f9;}
+
+.pricing-box.standered 
+ .pricing-button {
+    background: #ddd;
+}
+
+.pricing-box.standered .pricing-button .btn {
+    background: #9632DC;
+}
+
+.pricing-box.standered {
+    background: #f8f8f8;
+}
+
+.pricing-box.standered .pricing-box-inner .price-title {
+    line-height: 3;
+}
+.pricing-box.simple:hover .pricing-box-inner .price-title {
+    line-height: 3;
+}
+
+.pricing-box.standered .pricing-button {
+    line-height: 7;
+}
+
+.pricing-box.simple:hover .pricing-button {
+    line-height: 7;
+}
+
+.pricing-box small {
+    display: block;
+    line-height: 0;
+    padding-bottom: 20px;
+    font-size: 12px;
+    margin-top: -8px;
+}
+
+.pricing-box .price-text small {
+    margin-top: -15px;
+}
+
+
+
+/* Medium Layout: 1280px. */
+/*@media only screen and (min-width: 1440px) and (max-width: 1900px) {}*/ 
+
+
+/* Medium Layout: 1280px. */
+/*@media only screen and (min-width: 992px) and (max-width: 1200px) {}*/
+
+
+/* Tablet Layout: 768px. */
+/*@media only screen and (min-width: 768px) and (max-width: 1024px) {}*/
+
+
+/* Mobile Layout: 320px. */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+.pricing-box {
+    width: 100%;
+    display: block;
+    margin: 15px 0;
+    padding: 15px 0 0;
+}
+
+.pricing-box-inner .price-title {
+    font-size: 14px;
+}
+
+.price-text {
+    line-height: 1.5;
+    margin-top: 15px;
+}
+.pricing-box-inner strong {
+    font-size: 28px;
+}
+
+.pricing-box ul li {
+    line-height: 2;
+}
+
+.pricing-box .pricing-button {
+    line-height: 4;
+}
+
+.pricing-box.standered .pricing-button {
+    line-height: 5;
+}
+.pricing-box.simple:hover .pricing-button {
+    line-height: 5;
+}
+.pricing-box small {
+    margin-top: 0 !important;
+}
+
+
+
+}

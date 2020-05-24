@@ -9,7 +9,7 @@ class Elementor_Pricing_Widget extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Pricing Table', 'msiit-toolkit' );
+		return __( 'Pricing Table', 'codermsiit' );
 	}
 
 	public function get_icon() {
@@ -25,7 +25,7 @@ class Elementor_Pricing_Widget extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Pricing Box', 'msiit-toolkit' ),
+				'label' => __( 'Pricing Box', 'codermsiit' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -33,7 +33,7 @@ class Elementor_Pricing_Widget extends \Elementor\Widget_Base {
 		$repeater = new \Elementor\Repeater();
 		$repeater->add_control(
 			'box_class', [
-				'label' => __( 'Select Box Style', 'msiit-toolkit' ),
+				'label' => __( 'Select Box Style', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'options'	=> [
                 	'standered'	=> __('Standered', 'avocado-toolkit'),
@@ -43,41 +43,41 @@ class Elementor_Pricing_Widget extends \Elementor\Widget_Base {
 
 		$repeater->add_control(
 			'title', [
-				'label' => __( 'Title', 'msiit-toolkit' ),
+				'label' => __( 'Title', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Pricing Title' , 'msiit-toolkit' ),
+				'default' => __( 'Pricing Title' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'content', [
-				'label' => __( 'Pricing list', 'msiit-toolkit' ),
+				'label' => __( 'Pricing list', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::WYSIWYG,
-				'default' => __( 'Pricing list' , 'msiit-toolkit' ),
+				'default' => __( 'Pricing list' , 'codermsiit' ),
 				'show_label' => false,
 			]
 		);
 
 		$repeater->add_control(
 			'value', [
-				'label' => __( 'Value', 'msiit-toolkit' ),
+				'label' => __( 'Value', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( '$19.99' , 'msiit-toolkit' ),
+				'default' => __( '$19.99' , 'codermsiit' ),
 			]
 		);
 
 		$repeater->add_control(
 			'price_btn_text', [
-				'label' => __( 'Button text', 'msiit-toolkit' ),
+				'label' => __( 'Button text', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Read more' , 'msiit-toolkit' ),
+				'default' => __( 'Read more' , 'codermsiit' ),
 			]
 		);
 
 		$repeater->add_control(
 			'price_link', [
-				'label' => __( 'Button link', 'msiit-toolkit' ),
+				'label' => __( 'Button link', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
@@ -85,7 +85,7 @@ class Elementor_Pricing_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'prices',
 			[
-				'label' => __( 'Pricings', 'msiit-toolkit' ),
+				'label' => __( 'Pricings', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 			]
@@ -136,7 +136,7 @@ class Elementor_Testimonial_Widget extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Malp Testimonials', 'msiit-toolkit' );
+		return __( 'Malp Testimonials', 'codermsiit' );
 	}
 
 	public function get_icon() {
@@ -152,7 +152,7 @@ class Elementor_Testimonial_Widget extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Testimonials', 'msiit-toolkit' ),
+				'label' => __( 'Testimonials', 'codermsiit' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -161,16 +161,16 @@ class Elementor_Testimonial_Widget extends \Elementor\Widget_Base {
 
 		$repeater->add_control(
 			'title', [
-				'label' => __( 'Title', 'msiit-toolkit' ),
+				'label' => __( 'Title', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'Title' , 'msiit-toolkit' ),
+				'default' => __( 'Title' , 'codermsiit' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'content', [
-				'label' => __( 'Content', 'msiit-toolkit' ),
+				'label' => __( 'Content', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::WYSIWYG,
 				'show_label' => false,
 			]
@@ -178,14 +178,14 @@ class Elementor_Testimonial_Widget extends \Elementor\Widget_Base {
 
 		$repeater->add_control(
 			'test_image', [
-				'label' => __( 'Image', 'msiit-toolkit' ),
+				'label' => __( 'Image', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 			]
 		);
 
 		$repeater->add_control(
 			'name', [
-				'label' => __( 'Name', 'msiit-toolkit' ),
+				'label' => __( 'Name', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'show_label' => false,
 			]
@@ -193,7 +193,7 @@ class Elementor_Testimonial_Widget extends \Elementor\Widget_Base {
 
 		$repeater->add_control(
 			'desig', [
-				'label' => __( 'Designation', 'msiit-toolkit' ),
+				'label' => __( 'Designation', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'show_label' => false,
 			]
@@ -213,7 +213,7 @@ class Elementor_Testimonial_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'testis',
 			[
-				'label' => __( 'Testimonial Box', 'msiit-toolkit' ),
+				'label' => __( 'Testimonial Box', 'codermsiit' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 			]

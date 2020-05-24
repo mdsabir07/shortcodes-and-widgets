@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: CoderMSIIT Addons
+ * Plugin Name: CoderMSIit Elementor Addons
  * Description: The plugin work only if installed the Elementor page builder.
- * Version:     1.0.0
+ * Version:     1.0
  * Author:      Sabirul Islam
  * Author URI:  https://codermsiit.com/
  * Text Domain: codermsiit
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main Elementor Test Extension Class
  */
-final class Msiit_Elementor_Dependency {
+final class Codermsiit_Elementor_Dependency {
 
 	/**
 	 *
@@ -140,24 +140,17 @@ final class Msiit_Elementor_Dependency {
 	 * Init Widgets
 	 */
 	public function init_widgets() {
-
 		// Include Widget files
 		require_once( __DIR__ . '/addons.php' );
-
 		// Register widget
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Slider_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Services_Widget() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Msiit_Accordion_Widget() );
-
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Codermsiit_Pricing_Widget() );
 	}
 }
-Msiit_Elementor_Dependency::instance();
+Codermsiit_Elementor_Dependency::instance();
 
-function msiit_toolkit_scripts() {
-
-    wp_enqueue_style( 'codermsiit', plugin_dir_url( __FILE__ ) . '/toolkit.css', array(), 'v.1.0.0' );
+function codermsiit_toolkit_scripts() {
+    wp_enqueue_style( 'codermsiit', plugin_dir_url( __FILE__ ) . '/codermsiit.css', array(), '1.0' );
     
-    wp_enqueue_script( 'toolkit', plugins_url('assets/js/tookit.js', __FILE__ ), array('jquery'), 'v.1.0.0', true );
-
+    wp_enqueue_script( 'codermsiit', plugins_url('assets/js/codermsiit.js', __FILE__ ), array('jquery'), 'v.1.0.0', true );
 }
-add_action( 'wp_enqueue_scripts', 'msiit_toolkit_scripts' );
+add_action( 'wp_enqueue_scripts', 'codermsiit_toolkit_scripts' );

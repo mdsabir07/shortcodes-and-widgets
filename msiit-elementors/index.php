@@ -5,7 +5,7 @@
  * Version:     1.0.0
  * Author:      Sabirul Islam
  * Author URI:  https://codermsiit.com/
- * Text Domain: msiit-toolkit
+ * Text Domain: codermsiit
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -52,7 +52,7 @@ final class Msiit_Elementor_Dependency {
 	 * Load Textdomain
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'msiit-toolkit' );
+		load_plugin_textdomain( 'codermsiit' );
 	}
 
 	/**
@@ -92,9 +92,9 @@ final class Msiit_Elementor_Dependency {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
-			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'msiit-toolkit' ),
-			'<strong>' . esc_html__( 'Elementor Test Extension', 'msiit-toolkit' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'msiit-toolkit' ) . '</strong>'
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'codermsiit' ),
+			'<strong>' . esc_html__( 'Elementor Test Extension', 'codermsiit' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'codermsiit' ) . '</strong>'
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -110,9 +110,9 @@ final class Msiit_Elementor_Dependency {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'msiit-toolkit' ),
-			'<strong>' . esc_html__( 'Elementor Test Extension', 'msiit-toolkit' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'msiit-toolkit' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'codermsiit' ),
+			'<strong>' . esc_html__( 'Elementor Test Extension', 'codermsiit' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'codermsiit' ) . '</strong>',
 			 self::MINIMUM_ELEMENTOR_VERSION
 		);
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -127,9 +127,9 @@ final class Msiit_Elementor_Dependency {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'msiit-toolkit' ),
-			'<strong>' . esc_html__( 'Elementor Test Extension', 'msiit-toolkit' ) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', 'msiit-toolkit' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'codermsiit' ),
+			'<strong>' . esc_html__( 'Elementor Test Extension', 'codermsiit' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', 'codermsiit' ) . '</strong>',
 			 self::MINIMUM_PHP_VERSION
 		);
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -151,7 +151,7 @@ Msiit_Elementor_Dependency::instance();
 
 function msiit_toolkit_scripts() {
 	wp_enqueue_style( 'slick', plugin_dir_url( __FILE__ ) . 'assets/css/slick.css', array(), '20151215' );
-    wp_enqueue_style( 'msiit-toolkit', plugin_dir_url( __FILE__ ) . '/toolkit.css', array(), '20151215' );
+    wp_enqueue_style( 'codermsiit', plugin_dir_url( __FILE__ ) . '/toolkit.css', array(), '20151215' );
     
     wp_enqueue_script( 'slick', plugins_url('assets/js/slick.min.js', __FILE__ ), array('jquery'), 'v.1.9.0', true );
     wp_enqueue_script( 'toolkit', plugins_url('assets/js/tookit.js', __FILE__ ), array('jquery'), 'v.1.0.0', true );
