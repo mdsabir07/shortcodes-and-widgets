@@ -1,0 +1,862 @@
+/*slick-slider css*/
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+/*End slick slider css*/
+
+/*Slider CSS*/
+.single-slider-item {
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+    background-repeat: no-repeat;
+}
+
+.slide-content {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 25px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.slide-title {
+    font-size: 60px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.slider-absolute-image img {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    height: 633px;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.slider-absolute-image {
+    position: relative;
+}
+
+.slick-slide .slide-content-box {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+.slick-slide.slick-current.slick-active .slide-content-box {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    perspective: perspective;
+    transform-style: preserve-3d;
+    -webkit-transition: all 1s ease-in-out 0.3s;
+    transition: all 1s ease-in-out 0.3s;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide-content p {
+    margin-bottom: 0;
+}
+
+/*Button CSS*/
+.boxed-btn {
+    display: inline-block;
+    padding: .3em 1em;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 34px;
+    position: relative;
+    text-transform: capitalize;
+    transition: all .2s;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    background: #27AE60;
+    color: #fff;
+}
+
+.boxed-btn:after {
+    position: absolute;
+    content: "\f105";
+    font-family: fontawesome;
+    margin-left: -16px;
+    font-size: 25px;
+    transition: all 300ms ease 0ms;
+    opacity: 0;
+}
+
+.boxed-btn:hover:after {
+    opacity: 1;
+    margin-left: 0;
+    right: 15px;
+}
+
+.boxed-btn:hover {
+    padding: .3em 2em .3em .7em;
+    background: #fff;
+    color: #333;
+}
+
+
+.slides.slick-slider i.slick-arrow {
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    margin-top: -25px;
+    left: 50px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s ease;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(36,163,90,0.5);
+    color: #fff;
+}
+
+.slides.slick-slider i.fa-angle-right.slick-arrow {
+    left: auto;
+    right: 50px;
+}
+
+.slides.slick-slider:hover i.slick-arrow {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slides i.slick-arrow:hover {
+    background: #27AE60;
+}
+
+.slides .slick-dots {
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+}
+
+.slides .slick-dots li button ,
+.slides .slick-dots li button:before {
+    display: none;
+}
+
+.slides .slick-dots li {
+    width: 10px;
+    height: 10px;
+    background: #27AE60;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 100%;
+    transition: all .4s ease;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.slides .slick-dots li.slick-active {
+    background: #27AE60;
+    opacity: 1;
+}
+
+.slides.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+
+/*Pricing CSS*/
+.page-id-719 .post-padding {
+    padding: 0;
+    border: none;
+}
+
+.pricing-area {
+    text-align: center;
+}
+
+.pricing-boxs {
+    width: 32.25%;;
+    display: inline-block;
+    margin-left: 15px;
+    box-shadow: 5px 0 20px 3px #ddd;
+}
+
+.pricing-boxs:first-child {
+	margin-left: 0;
+}
+
+.pricing-box-inner {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.price-title h2 {
+    font-size: 45px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.price-title {
+    text-align: left;
+}
+
+.price-title i {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.price-title h4 {
+    font-size: 21px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.discount-img {
+    position: relative;
+}
+
+.discount-price-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.discount-texts {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    margin-top: -55px;
+    margin-left: -8px;
+}
+
+.discount-texts strong {
+    display: block;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.pricing-boxs.table-number-1 .discount-texts strong {
+    font-size: 30px;
+}
+
+.pricing-boxs.table-number-1 .discount-texts {
+    font-size: 23px;
+}
+
+.discount-img img {
+    width: 153px;
+}
+
+.price-text strong {
+    font-size: 57px;
+    font-weight: 800;
+    display: block;
+    line-height: 1;
+}
+
+.pricing-boxs.table-number-2 .price-text strong {
+    font-size: 48px;
+}
+
+.price-text {
+    text-align: left;
+    transform: translateY(30px);
+}
+
+
+.pricing-boxs.table-number-2 .price-text {
+    transform: translateY(55px);
+}
+
+.pricing-boxs.table-number-3 .price-text {
+    transform: translateY(75px);
+}
+
+.pricing-boxs.table-number-3 .discount-img {
+    left: 40px;
+}
+
+.price-text span {
+    font-size: 34px;
+    opacity: 0.10;
+    text-decoration: line-through;
+}
+
+.larger-texts {
+    padding-top: 25px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+    line-height: 1.3;
+    transform: translateY(10px);
+}
+
+.subscribe-form input {
+    width: 100%;
+    line-height: 1;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    padding: 2px 10px;
+}
+
+.subscribe-form input[type="email"] {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.subscribe-form input[type="submit"] {
+    background: #2B8D53;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    transition: all .3s ease;
+}
+
+.subscribe-form .ajax-loader {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: 0 !important;
+}
+
+.pricing-button a {
+    background: #FF3F42;
+    display: block;
+    border-radius: 0;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    transition: all .3s ease;
+    font-weight: 600;
+}
+
+.subscribe-form input[type="submit"]:hover,
+.pricing-button a:hover {
+	background: #27AE60;
+	color: #fff;
+}
+
+.pricing-boxs.table-number-2 .discount-texts {
+    font-size: 18px;
+    margin-left: 4px;
+    margin-top: -43px;
+}
+
+.pricing-boxs.table-number-2 .discount-texts strong {
+    font-size: 24px;
+}
+
+.pricing-boxs.table-number-2 .price-text span {
+    font-size: 25px;
+}
+
+.pricing-boxs.table-number-3 .price-text strong {
+    font-size: 40px;
+}
+
+.pricing-boxs.table-number-3 .price-text span {
+    font-size: 22px;
+}
+
+.pricing-boxs.table-number-3 .discount-texts {
+    font-size: 16px;
+    margin-top: -40px;
+    margin-left: 8px;
+}
+
+.pricing-boxs.table-number-3 .discount-texts strong {
+    font-size: 22px;
+}
+
+
+/*Spanish course CSS*/
+.page-id-969 .pages-title.section {
+    display: none !important;
+}
+
+.page-id-969 .section {
+    padding-top: 0;
+}
+.spanish-courses {
+    position: relative;
+    height: 640px;
+}
+.spanish-courses.right-imgae {
+    padding-left: 120px;
+}
+
+
+.course-big-img {
+    position: absolute;
+    top: 0;
+}
+
+.right .course-big-img {
+    right: -10px;
+}
+
+.spanish-courses.left-imgae {
+    padding-right: 120px;
+}
+
+.left .course-big-img {
+    left: -10px;
+}
+
+img.flag-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+}
+
+.spanish-courses img.flag-img,
+.spanish-last-section .spanish-courses.right-imgae img.flag-img {
+    display: none;
+}
+
+.spanish-courses.right-imgae img.flag-img {
+    display: block;
+}
+
+.spanish-course-addons .badge-text {
+    border-top: 3px dotted #C60B1E;
+    border-left: 3px dotted #C60B1E;
+    border-right: 3px dotted #C60B1E;
+    background-color: #FFC400;
+    color: #3F3F3F;
+    font-weight: 800;
+}
+
+.spanish-course-addons .widget-title {
+    border-bottom: 3px dotted #C60B1E;
+    border-right: 3px dotted #C60B1E;
+    border-left: 3px dotted #C60B1E;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.spanish-course-addons .available-btn, .spanish-course-addons .course-meta {
+    background: #C60B1E;
+    color: #fff !important;
+}
+
+.spanish-course-addons .btn.btn-sm.btn-inverse {
+    font-weight: 800;
+    border: 3px dashed #ddd !important;
+}
+
+.spanish-course-addons .course-meta {
+    margin-bottom: 0;
+}
+
+.spanish-course-addons .widget-title h3 {
+    text-transform: uppercase;
+}
+
+.spanish-course-addons .widget-title h3 a {
+    color: #C60B1E;
+}
+
+.spanish-course-addons .students-count p {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.spanish-course-addons .available-btn {
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+
+/* Medium Layout: 1280px. */
+/*@media only screen and (min-width: 1440px) and (max-width: 1900px) {}*/ 
+
+
+/* Medium Layout: 1280px. */
+/*@media only screen and (min-width: 992px) and (max-width: 1200px) {}*/
+
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+.single-slider-item {
+    height: 370px;
+}
+
+.slide-title {
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.slide-title br {
+    display: none;
+}
+
+.boxed-btn {
+    line-height: 22px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: .3em .5em;
+}
+
+.boxed-btn:hover {
+    padding: .3em 1.7em .3em .7em;
+}
+
+.slides.slick-slider i.slick-arrow {
+    display: none !important;
+}
+
+
+.pricing-boxs {
+    width: 48.5%;
+    margin-bottom: 15px;
+}
+
+.spanish-courses.right-imgae {
+    padding-left: 0;
+}
+
+.spanish-courses.left-imgae {
+    padding-right: 0;
+}
+
+.spanish-courses {
+    height: inherit;
+}
+
+img.flag-img {
+    width: 120px;
+}
+
+.course-big-img {
+    position: inherit;
+}
+
+.right .course-big-img {
+    right: 0;
+}
+
+.left .course-big-img {
+    left: 0;
+    margin-top: 100px;
+}
+
+}
+
+
+/* Mobile Layout: 320px. */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+.single-slider-item {
+    height: 230px;
+}
+
+.slide-content {
+    font-size: 14px !important;
+    line-height: 18px;
+    font-weight: 300;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.slide-title br {
+    display: none;
+}
+
+.slide-title {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.boxed-btn {
+    padding: .1em .6em;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.boxed-btn:hover {
+    padding: .3em 1.7em .3em .7em;
+}
+
+
+.slides.slick-slider i.slick-arrow {
+    display: none !important;
+}
+
+.slides .slick-dots {
+    bottom: 10px;
+    margin-left: 0;
+}
+
+
+.pricing-boxs {
+    width: 100%;
+    display: block;
+    margin: 15px 0;
+}
+
+.price-title h2 {
+    font-size: 35px;
+}
+
+.price-title i {
+    font-size: 20px;
+}
+
+.price-title h4 {
+    font-size: 18px;
+}
+
+.pricing-boxs.table-number-1 .discount-texts strong {
+    font-size: 25px;
+}
+
+.pricing-boxs.table-number-1 .discount-texts {
+    font-size: 18px;
+    margin-top: -45px;
+    margin-left: -5px;
+}
+
+.discount-img img {
+    max-width: 120px !important;
+}
+
+.price-text strong {
+    font-size: 40px;
+}
+
+.price-text span {
+    font-size: 22px;
+}
+
+.price-text {
+    transform: translateY(20px);
+}
+
+.discount-price-text {
+    margin-top: 30px;
+}
+
+.larger-texts {
+    padding-top: 15px;
+    margin-bottom: 15px;
+    transform: translateY(0);
+}
+
+.pricing-boxs.table-number-2 .discount-texts {
+    font-size: 14px;
+    margin-top: -38px;
+}
+
+.pricing-boxs.table-number-2 .price-text strong,
+.pricing-boxs.table-number-3 .price-text strong {
+    font-size: 30px;
+}
+
+.pricing-boxs.table-number-2 .price-text span,
+.pricing-boxs.table-number-3 .price-text span {
+    font-size: 18px;
+}
+
+.pricing-boxs.table-number-2 .price-text {
+    transform: translateY(45px);
+}
+
+.pricing-boxs.table-number-3 .discount-texts {
+    font-size: 14px;
+    margin-top: -36px;
+    margin-left: 3px;
+}
+
+.pricing-boxs.table-number-3 .price-text {
+    transform: translateY(40px);
+}
+
+.spanish-courses.right-imgae {
+    padding-left: 0;
+}
+
+.spanish-courses.left-imgae {
+    padding-right: 0;
+}
+
+img.flag-img {
+    width: 120px;
+}
+
+.spanish-courses {
+    height: inherit;
+}
+
+.course-big-img {
+    position: inherit;
+}
+
+.right .course-big-img {
+    right: 0;
+    margin-top: 20px;
+}
+
+.left .course-big-img {
+    left: 0;
+    margin-top: 100px;
+}
+
+
+
+
+
+}
