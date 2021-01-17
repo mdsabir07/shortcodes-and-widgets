@@ -1,0 +1,121 @@
+/** {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*/
+
+section.project-courses {
+	width: 1200px;
+	margin: 40px auto;
+}
+
+/*section.project-courses ul {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+
+
+section.project-courses ul li.active {
+	background: #03a9f4;color: #fff;
+}*/
+section.project-courses ul li {
+	list-style: none;
+	background: #eee;
+	padding: 8px 20px;
+	margin: 5px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	display: table-row-group;
+}
+
+.course-cats { 
+	display:none; 
+}
+section.project-courses ul.course-cats {
+    margin-left: 0;
+}
+
+.tg_course {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tg_course .itemBx {
+	position: relative;
+	width: 275px;
+	height: 275px;
+	margin: 5px;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	border-radius: 5px 5px 0 0;
+}
+
+.tg_course .itemBx .course-img img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+}
+
+.course-content {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+.course-content .course-author img {
+    height: 40px !important;
+    width: 40px !important;
+    max-width: 100%;
+    border-radius: 100%;
+    border: 2px solid #ccc;
+    object-fit: contain !important;
+    margin-right: 10px;
+}
+.course-author {
+	margin-top: 15px;
+}
+.course-content a h4 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+section.project-courses {
+    width: 100%;
+    max-width: 100%;
+}
+.tg_course .itemBx {
+    width: 46%;
+    height: 310px;
+}
+/*
+	section.project-courses ul {
+	    display: block;
+	}*/
+}
+
+@media only screen and (max-width: 767px) {
+section.project-courses {
+    width: 100%;
+    max-width: 100%;
+}
+.tg_course .itemBx {
+    width: 100%;
+    height: 310px;
+}
+/*
+	section.project-courses ul {
+	    display: block;
+	}*/
+}
